@@ -1,0 +1,141 @@
+{
+  "navbar": {
+    "services": "Servicios",
+    "about": "Sobre nosotros",
+    "contact": "Contáctanos"
+  },
+  "about-exp": "Años de experiencia",
+  "about-button": "Contáctanos",
+  "phone": "Teléfono",
+  "email": "Correo electrónico",
+  "address": "Direcciones",
+  "schedule": "Horario",
+  "contact-form": {
+    "title": "Envíanos un mensaje",
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "placeholder": {
+      "name": "Tu nombre",
+      "email": "email@example.com",
+      "message": "¿En qué te podemos ayudar?"
+    },
+    "send": "Enviar mensaje"
+  },
+  "footer": {
+    "text1": "PROGRAMA KIT DIGITAL FINANCIADO POR LOS FONDOS NEXT GENERATION DEL MECANISMO DE RECUPERACIÓN Y RESILIENCIA",
+    "legal-advice": "Aviso legal",
+    "privacy-policy": "Política de privacidad",
+    "cookies-policy": "Política de cookies"
+  },
+  "aviso-legal": {
+    "title": "AVISO LEGAL Y CONDICIONES GENERALES DE USO",
+    "section1Title": "I. INFORMACIÓN GENERAL",
+    "section1P1": "En cumplimiento con el deber de información dispuesto en la Ley 34/2002 de Servicios de la Sociedad de la Información y el Comercio Electrónico (LSSI-CE) de 11 de julio, a continuación se facilitan los datos de información general de este sitio web:",
+    "section1P2": "La titularidad de este sitio web, https://efasol.com/ (en adelante, Sitio Web) la ostenta: Albert Espelt Font, con NIF 77477030N, y cuyos datos de contacto son:",
+    "section1ListItem1": "Dirección: Carrer Montsant, 6, 08272 Sant Fruitós de Bages, Barcelona, España",
+    "section1ListItem2": "Teléfono de contacto: +34 661 52 35 09",
+    "section1ListItem3": "Correo electrónico de contacto: info@efasol.com",
+    "section2Title": "II. TÉRMINOS Y CONDICIONES GENERALES DE USO",
+    "section2P1": "El objeto de las presentes Condiciones es regular el acceso y la utilización del Sitio Web. Se entenderá como Sitio Web la apariencia externa de las interfaces de pantalla, tanto de forma estática como dinámica, es decir, el árbol de navegación; y todos los elementos integrados en dichas interfaces (en adelante, Contenidos), así como todos aquellos servicios o recursos en línea que se ofrezcan a los Usuarios (en adelante, Servicios).",
+    "section2P2": "Efasol se reserva la facultad de modificar, en cualquier momento y sin previo aviso, la presentación y configuración del Sitio Web, así como de los Contenidos y Servicios que en él puedan estar incorporados. El Usuario reconoce y acepta que en cualquier momento Efasol pueda interrumpir, desactivar y/o cancelar cualquiera de estos elementos o el acceso a los mismos.",
+    "section2P3": "El acceso al Sitio Web por parte del Usuario tiene carácter libre y, por regla general, es gratuito, salvo en lo relativo al coste de conexión a través de la red de telecomunicaciones suministrada por el proveedor de acceso.",
+    "section2P4": "Algunos de los Contenidos o Servicios ofrecidos por Efasol o terceros pueden estar sujetos a contratación previa, en cuyo caso se especificará de manera clara y se pondrán a disposición del Usuario las correspondientes condiciones generales o particulares.",
+    "section2P5": "El acceso, la navegación y el uso del Sitio Web, así como la participación en espacios de interacción, confieren la condición de Usuario, por lo que, desde el inicio de la navegación, se aceptan todas las presentes Condiciones y sus futuras modificaciones.",
+    "section3Title": "III. ACCESO Y NAVEGACIÓN EN EL SITIO WEB: EXCLUSIÓN DE GARANTÍAS Y RESPONSABILIDAD",
+    "section3P1": "Efasol no garantiza la continuidad, disponibilidad y utilidad del Sitio Web ni de los Contenidos o Servicios. Hará todo lo posible por mantener el correcto funcionamiento, pero no se responsabiliza por interrupciones o errores, ni garantiza que el contenido o software accesible esté libre de errores o cause daños al sistema informático del Usuario.",
+    "section3P2": "En ningún caso Efasol será responsable por pérdidas, daños o perjuicios derivados del acceso, navegación o uso del Sitio Web.",
+    "section4Title": "IV. POLÍTICA DE ENLACES",
+    "section4P1": "El Sitio Web puede poner a disposición del Usuario enlaces, banners y botones que permiten acceder a sitios web de terceros. La presencia de estos enlaces no implica la aprobación o recomendación de tales sitios, ni Efasol asume responsabilidad por el contenido, veracidad o legalidad de los mismos.",
+    "section4P2": "El establecimiento de un enlace no implica relación comercial alguna entre Efasol y el titular del sitio web enlazado.",
+    "section5Title": "V. PROPIEDAD INTELECTUAL E INDUSTRIAL",
+    "section5P1": "Efasol, por sí o como parte cesionaria, es titular de todos los derechos de propiedad intelectual e industrial del Sitio Web y de los elementos que en él se integran (incluyendo imágenes, sonido, audio, vídeo, software, textos, marcas, logotipos, etc.). Estos contenidos están protegidos por la normativa española, comunitaria e internacional.",
+    "section5P2": "Queda expresamente prohibida la reproducción, distribución y comunicación pública, total o parcial, de los contenidos del Sitio Web con fines comerciales, sin la autorización expresa de Efasol.",
+    "section5P3": "El Usuario se compromete a respetar estos derechos y podrá visualizar, imprimir o copiar los contenidos únicamente para uso personal.",
+    "section6Title": "VI. ACCIONES LEGALES, LEGISLACIÓN APLICABLE Y JURISDICCIÓN",
+    "section6P1": "Efasol se reserva el derecho de emprender acciones legales en caso de uso indebido del Sitio Web y de sus Contenidos. La relación entre el Usuario y Efasol se regirá por la normativa española, sometiéndose a la jurisdicción de los tribunales competentes en España."
+  },
+  "politica-cookies": {
+    "title": "POLÍTICA DE COOKIES",
+    "section1Title": "1. ¿Qué son las Cookies?",
+    "section1P1": "Las cookies son pequeños archivos de texto que se almacenan en el navegador del usuario cuando visita determinadas páginas web. Permiten que la web recuerde información sobre tu visita (por ejemplo, idioma preferido, estadísticas de uso, etc.) para facilitar tu próxima visita y hacer el sitio más útil.",
+    "section2Title": "2. Tipos de Cookies que Utilizamos",
+    "section2Bullet1": {
+      "title": "Cookies técnicas o necesarias",
+      "desc": "Permiten la navegación y el uso de las funciones esenciales del Sitio. Sin estas cookies, el Sitio podría no funcionar correctamente."
+    },
+    "section2Bullet2": {
+      "title": "Cookies de preferencias o personalización",
+      "desc": "Recuerdan configuraciones como el idioma o la región para mejorar la experiencia del usuario."
+    },
+    "section2Bullet3": {
+      "title": "Cookies analíticas o de rendimiento",
+      "desc": "Recopilan información anónima sobre cómo los usuarios utilizan el Sitio con fines estadísticos, ayudándonos a mejorar la usabilidad."
+    },
+    "section2Bullet4": {
+      "title": "Cookies de terceros",
+      "desc": "Pueden ser instaladas por servicios externos (por ejemplo, Google Analytics, redes sociales) cuando el usuario interactúa con nuestro Sitio."
+    },
+    "section3Title": "3. Finalidad de las Cookies",
+    "section3ListItem1": "Garantizar el correcto funcionamiento del Sitio.",
+    "section3ListItem2": "Recordar tus preferencias (idioma, configuración, etc.).",
+    "section3ListItem3": "Analizar el tráfico y el comportamiento de navegación para mejorar la calidad de nuestro servicio.",
+    "section3ListItem4": "Proporcionar contenido relevante y, en algunos casos, publicidad adaptada a tus intereses.",
+    "section4Title": "4. Configuración y Desactivación de Cookies",
+    "section4P1": "El usuario puede permitir, bloquear o eliminar las cookies instaladas en su dispositivo a través de la configuración del navegador. Ten en cuenta que, al desactivar ciertas cookies, algunas funcionalidades del Sitio podrían verse afectadas.",
+    "section4BrowserList": {
+      "chrome": "Instrucciones",
+      "firefox": "Instrucciones",
+      "safari": "Instrucciones",
+      "edge": "Instrucciones"
+    },
+    "section4P2": "Para más información sobre cómo gestionar o eliminar cookies, visita www.aboutcookies.org.",
+    "section5Title": "5. Cookies de Terceros",
+    "section5P1": "Algunas de nuestras páginas pueden mostrar contenido de terceros (por ejemplo, vídeos de YouTube, mapas de Google Maps) que pueden instalar sus propias cookies. No tenemos control sobre la configuración de esas cookies, por lo que te recomendamos revisar las políticas de los sitios correspondientes.",
+    "section6Title": "6. Aceptación de la Política de Cookies",
+    "section6P1": "Al continuar navegando por nuestro Sitio, entendemos que aceptas el uso de cookies en las condiciones establecidas en esta Política de Cookies. Si en cualquier momento deseas retirar tu consentimiento, puedes eliminar las cookies almacenadas en tu navegador y modificar su configuración.",
+    "section7Title": "7. Actualizaciones y Cambios en la Política de Cookies",
+    "section7P1": "Nos reservamos el derecho de modificar esta Política de Cookies en cualquier momento para adaptarla a novedades legislativas o cambios en el funcionamiento del Sitio. Te recomendamos revisar periódicamente esta sección."
+  },
+  "politica-privacidad": {
+    "title": "POLÍTICA DE PRIVACIDAD",
+    "section1Title": "1. Introducción",
+    "section1P1": "En Efasol (en adelante, “la Empresa”) estamos comprometidos con la protección de la privacidad y el tratamiento adecuado de los datos personales de nuestros usuarios. La presente Política de Privacidad describe cómo recopilamos, utilizamos y protegemos la información que nos proporcionas al utilizar nuestro sitio web efasol.com (en adelante, “el Sitio”).",
+    "section1P2": "Al acceder y utilizar el Sitio, reconoces haber leído y aceptado los términos de esta Política de Privacidad.",
+    "section2Title": "2. Responsable del Tratamiento",
+    "section2ListItem1": "Responsable: EFASOL Energies Renovables",
+    "section2ListItem2": "Dirección: Carrer Montsant, 6, 08272 Sant Fruitós de Bages, Barcelona, España",
+    "section2ListItem3": "CIF/NIF: 77477030N",
+    "section2ListItem4": "Correo electrónico de contacto: info@efasol.com",
+    "section2ListItem5": "Teléfono: +34 661523509",
+    "section3Title": "3. Datos Personales Recopilados",
+    "section3P1": "Podemos recopilar datos personales de los usuarios cuando:",
+    "section3ListItem1": "Rellenan formularios de contacto, suscripción a newsletters o solicitan información (por ejemplo, nombre, email, teléfono).",
+    "section3ListItem2": "Navegan por el Sitio: se pueden recopilar datos de uso, dirección IP, ubicación aproximada, datos de tráfico o hábitos de navegación.",
+    "section3ListItem3": "Interactúan con servicios externos (por ejemplo, pasarelas de pago, redes sociales integradas, etc.), siempre de acuerdo con la configuración de privacidad de dichos servicios.",
+    "section4Title": "4. Finalidad del Tratamiento de Datos",
+    "section4ListItem1": "Atender solicitudes de información, consultas o soporte.",
+    "section4ListItem2": "Gestionar la relación comercial o contractual con nuestros clientes (facturación, pagos, pedidos).",
+    "section4ListItem3": "Enviar comunicaciones comerciales (newsletters, ofertas, promociones), siempre que el usuario haya dado su consentimiento expreso o exista base legal para ello.",
+    "section4ListItem4": "Analizar el uso de nuestro Sitio para mejorar la experiencia de usuario y la calidad de nuestros servicios (estadísticas, usabilidad, etc.).",
+    "section5Title": "5. Base Legal del Tratamiento",
+    "section5P1": "- Consentimiento: cuando el usuario rellena voluntariamente un formulario o marca casillas de aceptación.\n- Ejecución de un contrato: en caso de servicios o productos ofrecidos.\n- Interés legítimo: para fines de seguridad, mejora del servicio o comunicación con clientes, siempre respetando los derechos y libertades fundamentales.",
+    "section6Title": "6. Conservación de los Datos",
+    "section6P1": "Los datos personales se conservarán durante el tiempo necesario para cumplir con las finalidades descritas y para atender posibles responsabilidades legales, fiscales o contractuales. Posteriormente, se procederá a su supresión o anonimización segura.",
+    "section7Title": "7. Comunicación de Datos a Terceros",
+    "section7P1": "No se cederán datos personales a terceros, salvo que exista obligación legal o sea necesario para la prestación de un servicio (por ejemplo, servicios de hosting, pasarelas de pago, proveedores de correo electrónico). En tal caso, nos aseguraremos de que cumplan con la normativa de protección de datos.",
+    "section8Title": "8. Derechos de los Usuarios",
+    "section8P1": "Los usuarios pueden ejercer los siguientes derechos:",
+    "section8ListItem1": "Acceso: conocer si estamos tratando sus datos y obtener una copia de los mismos.",
+    "section8ListItem2": "Rectificación: solicitar la corrección de datos inexactos o incompletos.",
+    "section8ListItem3": "Supresión: pedir la eliminación de los datos cuando no sean necesarios o el usuario retire su consentimiento.",
+    "section8ListItem4": "Oposición: negarse al tratamiento de sus datos por motivos personales o cuando sea para fines de marketing directo.",
+    "section8ListItem5": "Limitación del tratamiento: solicitar la restricción temporal del uso de los datos en determinadas circunstancias.",
+    "section8ListItem6": "Portabilidad: recibir los datos en un formato estructurado, de uso común y lectura mecánica.",
+    "section8P2": "Para ejercer estos derechos, el usuario puede contactar al email: info@efasol.com, indicando claramente qué derecho desea ejercer y aportando copia de un documento identificativo.",
+    "section9Title": "9. Medidas de Seguridad",
+    "section9P1": "La Empresa aplica medidas técnicas y organizativas adecuadas para proteger los datos personales contra pérdida, uso indebido, acceso no autorizado, divulgación o alteración. Sin embargo, ningún sistema es completamente seguro; si detectamos cualquier brecha de seguridad, lo notificaremos a las autoridades competentes y a los usuarios afectados, de conformidad con la normativa aplicable.",
+    "section10Title": "10. Cambios en la Política de Privacidad",
+    "section10P1": "Nos reservamos el derecho de actualizar o modificar esta Política de Privacidad en cualquier momento. Los cambios serán efectivos desde su publicación en el Sitio. Recomendamos a los usuarios revisar periódicamente esta sección."
+  }
+}

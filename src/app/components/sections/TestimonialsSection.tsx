@@ -47,7 +47,10 @@ export default function TestimonialSection() {
     testimonials.length > 0 ? [...testimonials, ...testimonials] : [];
 
   return (
-    <section id="testimonials" className="py-24 bg-[#d4b897]/5 relative">
+    <section
+      id="testimonials"
+      className="py-24 bg-[#d4b897]/5 relative scroll-mt-15"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center max-w-2xl mx-auto mb-16"

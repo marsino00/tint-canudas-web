@@ -44,7 +44,7 @@ export default function AboutSection() {
     : "/jerseis2.jpg";
 
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className="py-24 bg-white scroll-mt-15">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <motion.div

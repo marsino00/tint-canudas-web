@@ -84,7 +84,7 @@ export default function ContactSection() {
   const schedule =
     data[0]?.fields?.schedule?.content?.[0]?.content?.[0]?.value ?? "Cargando";
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="py-24 bg-white scroll-mt-5">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center max-w-2xl mx-auto mb-16"

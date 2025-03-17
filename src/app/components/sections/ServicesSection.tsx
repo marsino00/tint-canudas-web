@@ -72,7 +72,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section id="services" className="py-24 bg-[#d4b897]/5">
+    <section id="services" className="py-24 bg-[#d4b897]/5 scroll-mt-10">
       <div className="container mx-auto px-4">
         {/* Encabezado de la sección */}
         <motion.div

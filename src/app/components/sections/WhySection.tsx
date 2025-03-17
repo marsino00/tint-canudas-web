@@ -82,7 +82,7 @@ export default function WhySection() {
   }
 
   return (
-    <section id="why-choose-us" className="py-16 bg-white">
+    <section id="why-choose-us" className="py-16 bg-white scroll-mt-14">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <motion.h2

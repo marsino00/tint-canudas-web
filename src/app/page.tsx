@@ -107,6 +107,24 @@ export default function Home() {
     },
   ];
 
+  // Nueva sección: Testimonios
+  const testimonials = [
+    {
+      name: "Marta",
+      comment:
+        "Excelente servicio, mi ropa quedó impecable. ¡Repetiré sin duda!",
+    },
+    {
+      name: "Carlos",
+      comment:
+        "Trato muy profesional y cercano. Se nota la experiencia del equipo.",
+    },
+    {
+      name: "Laura",
+      comment: "Respetuosos con el medio ambiente y con un resultado perfecto.",
+    },
+  ];
+
   return (
     <div className="relative">
       {/* Hero Section */}
@@ -176,7 +194,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="servicios" className="py-24 bg-[#d4b897]/5">
+      <section id="services" className="py-24 bg-[#d4b897]/5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-4xl font-bold text-black mb-4">
@@ -210,7 +228,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 p-6">
                     {service.items.map((item, idx) => (
                       <li key={idx} className="flex items-center text-gray-700">
                         <span className="w-1.5 h-1.5 bg-[#d4b897] rounded-full mr-3"></span>
@@ -226,7 +244,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="nosotros" className="py-24 bg-white">
+      <section id="about" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
@@ -271,8 +289,36 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NUEVA SECCIÓN: TESTIMONIOS */}
+      <section id="testimonials" className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold text-black mb-4">Testimonios</h2>
+            <div className="w-24 h-1 bg-[#d4b897] mx-auto mb-6"></div>
+            <p className="text-xl text-gray-600">
+              Lo que opinan nuestros clientes
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 shadow-lg rounded-lg hover:shadow-xl transition-all duration-300"
+              >
+                <p className="text-gray-700 italic">“{testimonial.comment}”</p>
+                <h4 className="mt-4 font-semibold text-black">
+                  — {testimonial.name}
+                </h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* FIN DE NUEVA SECCIÓN */}
+
       {/* Contact Section */}
-      <section id="contacto" className="py-24 bg-[#d4b897]/5">
+      <section id="contact" className="py-24 bg-[#d4b897]/5">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-4xl font-bold text-black mb-4">Contacto</h2>

@@ -3,7 +3,7 @@
 import { getEntries } from "@/app/lib/contentful";
 import { motion } from "framer-motion";
 import { Scissors, Shirt, ShirtIcon, WashingMachine } from "lucide-react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState, useEffect, JSX } from "react";
 import { ContentfulImage } from "@/app/types/data"; // Asegúrate de tener este tipo definido
@@ -21,6 +21,7 @@ export type ServiceData = {
 };
 
 export default function ServicesSection() {
+  const t = useTranslations();
   const selectedLocale = useLocale();
   const [data, setData] = useState<ServiceData[]>([]);
 
@@ -30,13 +31,12 @@ export default function ServicesSection() {
         content_type: "servicesSection",
         locale: selectedLocale,
       });
-      // Comprobamos si los datos vienen en entries.items o directamente en entries
       const mappedData = entries.map((item) => ({
         fields: {
           title: item.fields.title as string,
           servicesList: item.fields.servicesList as string[],
           icon: item.fields.icon as string,
-          serviceImage: item.fields.serviceImage as ContentfulImage, // Mapeo del nuevo campo
+          serviceImage: item.fields.serviceImage as ContentfulImage,
         },
         sys: {
           id: item.sys.id,
@@ -47,7 +47,6 @@ export default function ServicesSection() {
     fetchServicesData();
   }, [selectedLocale]);
 
-  // Mapeo de iconos: asigna el componente según el nombre recibido
   const iconMap: Record<string, JSX.Element> = {
     WashingMachine: <WashingMachine className="h-8 w-8 text-[#d4b897]" />,
     Shirt: <Shirt className="h-8 w-8 text-[#d4b897]" />,
@@ -55,7 +54,6 @@ export default function ServicesSection() {
     ShirtIcon: <ShirtIcon className="h-8 w-8 text-[#d4b897]" />,
   };
 
-  // Fallback de imágenes si no viene serviceImage
   const imageMap: Record<string, string> = {
     "Roba de la Llar": "/s1.jpg",
     "Roba de Vestir": "/s2.jpg",
@@ -63,7 +61,6 @@ export default function ServicesSection() {
     "Serveis Especials": "/s4.jpg",
   };
 
-  // Variantes de animación para el contenedor e ítems
   const containerVariants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.2 } },
@@ -86,12 +83,10 @@ export default function ServicesSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold text-black mb-4">
-            Els Nostres Serveis
+            {t("navbar.services")}
           </h2>
           <div className="w-24 h-1 bg-[#d4b897] mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600">
-            Cuidem la teva roba amb atenció i professionalitat
-          </p>
+          <p className="text-xl text-gray-600">{t("services-desc")}</p>
         </motion.div>
 
         {/* Grid de tarjetas */}

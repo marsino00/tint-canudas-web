@@ -43,14 +43,12 @@ export default function TestimonialSection() {
     fetchTestimonials();
   }, [selectedLocale]);
 
-  // Duplicamos el array para un slider continuo (si hay datos)
   const testimonialLoop =
     testimonials.length > 0 ? [...testimonials, ...testimonials] : [];
 
   return (
     <section id="testimonials" className="py-24 bg-[#d4b897]/5 relative">
       <div className="container mx-auto px-4">
-        {/* Encabezado */}
         <motion.div
           className="text-center max-w-2xl mx-auto mb-16"
           initial={{ opacity: 0, y: -10 }}
@@ -62,12 +60,9 @@ export default function TestimonialSection() {
             {t("navbar.testimonials") || "Testimonis"}
           </h2>
           <div className="w-24 h-1 bg-[#d4b897] mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600">
-            El que opinin els nostres clients sobre nosaltres
-          </p>
+          <p className="text-xl text-gray-600">{t("testimonials-desc")}</p>
         </motion.div>
 
-        {/* Slider de testimonis */}
         <div className="overflow-hidden">
           <motion.div
             className="flex space-x-8"
@@ -84,7 +79,6 @@ export default function TestimonialSection() {
                 className="min-w-[300px] bg-white p-6 shadow-lg rounded-lg flex flex-col justify-between hover:shadow-xl transition-all duration-300"
                 whileHover={{ scale: 1.03 }}
               >
-                {/* Fila de estrellas (rellenadas según el número de stars) */}
                 <div className="flex justify-center mb-4 text-[#d4b897]">
                   {Array.from({ length: testimonial.fields.stars }).map(
                     (_, i) => (
@@ -97,11 +91,9 @@ export default function TestimonialSection() {
                     )
                   )}
                 </div>
-                {/* Opinión */}
                 <p className="text-gray-700 italic mb-4">
                   “{testimonial.fields.opinion}”
                 </p>
-                {/* Autor de la review */}
                 <h4 className="mt-auto font-semibold text-black text-center">
                   — {testimonial.fields.reviewAuthor}
                 </h4>

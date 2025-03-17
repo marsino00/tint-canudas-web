@@ -100,7 +100,7 @@ export default function WhySection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Descobreix per què la nostra dedicació i qualitat ens diferencien.
+            {t("why-desc")}
           </motion.p>
         </div>
 

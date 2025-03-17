@@ -97,11 +97,7 @@ export default function ContactSection() {
             {t("navbar.contact")}
           </h2>
           <div className="w-24 h-1 bg-[#d4b897] mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600">
-            Estàs interessat en els nostres serveis? Contacta amb nosaltres i
-            t&apos;ajudarem a trobar la millor opció per a les teves
-            necessitats.
-          </p>
+          <p className="text-xl text-gray-600">{t("contact-desc")}</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -112,7 +108,7 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-8">Información de contacto</h3>
+            <h3 className="text-2xl font-bold mb-8">{t("contact-info")}</h3>
             <div className="space-y-6">
               <motion.div
                 className="flex items-start"

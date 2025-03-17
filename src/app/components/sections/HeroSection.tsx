@@ -105,7 +105,7 @@ export default function HeroSection() {
               className="flex items-center"
             >
               <Instagram className="mr-2 h-5 w-5" />
-              Segueix-nos a Instagram
+              {t("follow")}
             </a>
           </Button>
         </motion.div>

@@ -3,7 +3,6 @@
 import { useTranslations } from "next-intl";
 
 export default function PoliticaCookiesPage() {
-  // Ajusta la clave del namespace si tu JSON está organizado de otra manera.
   const t = useTranslations("politica-cookies");
 
   return (

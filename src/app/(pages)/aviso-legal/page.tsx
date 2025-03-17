@@ -3,16 +3,13 @@
 import { useTranslations } from "next-intl";
 
 export default function AvisoLegalPage() {
-  // Ajusta el namespace ("aviso-legal") a lo que tengas en tu archivo de traducciones.
   const t = useTranslations("aviso-legal");
 
   return (
     <main className="min-h-screen bg-white py-8">
       <div className="max-w-4xl mx-auto px-4 text-gray-700">
-        {/* Título principal */}
         <h1 className="text-3xl font-bold mb-6">{t("title")}</h1>
 
-        {/* I. INFORMACIÓN GENERAL */}
         <h2 className="text-xl font-semibold mb-2">{t("section1Title")}</h2>
         <p className="mb-4">{t("section1P1")}</p>
         <p className="mb-4">{t("section1P2")}</p>

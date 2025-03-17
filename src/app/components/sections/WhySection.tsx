@@ -6,12 +6,11 @@ import { BadgeCheck, Leaf, Sparkles, Star } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useState, useEffect, JSX } from "react";
 
-// Definición de tipo para los datos de la sección Why
 export type WhyData = {
   fields: {
     title: string;
-    description: string; // mapeado desde "desc"
-    icon: string; // nombre del icono, por ejemplo, "BadgeCheck"
+    description: string;
+    icon: string;
   };
   sys: {
     id: string;
@@ -34,7 +33,7 @@ export default function WhySection() {
         const mappedData = entries.map((item) => ({
           fields: {
             title: item.fields.title as string,
-            description: item.fields.desc as string, // usamos "desc" para la descripción
+            description: item.fields.desc as string,
             icon: item.fields.icon as string,
           },
           sys: {
@@ -51,7 +50,6 @@ export default function WhySection() {
     fetchWhyData();
   }, [selectedLocale]);
 
-  // Mapeo de iconos: asocia el nombre recibido con el componente correspondiente
   const iconMap: Record<string, JSX.Element> = {
     BadgeCheck: <BadgeCheck className="h-12 w-12 text-[#d4b897]" />,
     Sparkles: <Sparkles className="h-12 w-12 text-[#d4b897]" />,

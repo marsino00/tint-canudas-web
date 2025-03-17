@@ -6,14 +6,14 @@ import { Scissors, Shirt, ShirtIcon, WashingMachine } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState, useEffect, JSX } from "react";
-import { ContentfulImage } from "@/app/types/data"; // Asegúrate de tener este tipo definido
+import { ContentfulImage } from "@/app/types/data";
 
 export type ServiceData = {
   fields: {
     title: string;
     servicesList: string[];
     icon: string;
-    serviceImage: ContentfulImage; // Nuevo campo
+    serviceImage: ContentfulImage;
   };
   sys: {
     id: string;
@@ -74,7 +74,6 @@ export default function ServicesSection() {
   return (
     <section id="services" className="py-24 bg-[#d4b897]/5 scroll-mt-10">
       <div className="container mx-auto px-4">
-        {/* Encabezado de la sección */}
         <motion.div
           className="text-center max-w-2xl mx-auto mb-16"
           initial={{ opacity: 0, y: -10 }}
@@ -89,7 +88,6 @@ export default function ServicesSection() {
           <p className="text-xl text-gray-600">{t("services-desc")}</p>
         </motion.div>
 
-        {/* Grid de tarjetas */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
@@ -98,7 +96,6 @@ export default function ServicesSection() {
           viewport={{ once: true, amount: 0.2 }}
         >
           {data.map((service) => {
-            // Construimos la URL de la imagen si existe en serviceImage; de lo contrario, usamos el fallback
             const imageSrc = service.fields.serviceImage?.fields?.file?.url
               ? `https:${service.fields.serviceImage.fields.file.url}`
               : imageMap[service.fields.title.trim()] || "/default.jpg";
@@ -110,7 +107,6 @@ export default function ServicesSection() {
                 variants={cardVariants}
                 whileHover={{ scale: 1.03 }}
               >
-                {/* Imagen superior */}
                 <div className="relative h-50">
                   <Image
                     src={imageSrc}
@@ -121,19 +117,15 @@ export default function ServicesSection() {
                   />
                 </div>
 
-                {/* Contenido de la tarjeta */}
                 <div className="p-5 flex-1">
                   <div className="flex items-center gap-5">
-                    {/* Contenedor del icono */}
                     <div className="w-14 h-14 flex items-center justify-center bg-[#d4b897]/10 rounded-full mb-3">
                       {iconMap[service.fields.icon] || null}
                     </div>
-                    {/* Título */}
                     <h3 className="text-xl font-bold text-black mb-4 transition-colors duration-300 group-hover:text-[#d4b897]">
                       {service.fields.title}
                     </h3>
                   </div>
-                  {/* Lista de servicios */}
                   <ul className="space-y-2 text-gray-700">
                     {service.fields.servicesList.map((item, idx) => (
                       <li key={idx} className="flex items-center">

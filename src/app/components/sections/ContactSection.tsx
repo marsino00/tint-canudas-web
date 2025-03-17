@@ -63,20 +63,30 @@ export default function ContactSection() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(formData);
-    alert("Mensaje enviado correctamente");
-    setFormData({ name: "", email: "", phone: "", message: "" });
-  };
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        alert("Missatge enviat correctament");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        alert("Error al enviar el missatge");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error al enviar el missatge");
+    }
   };
 
   const address = data[0]?.fields?.address ?? "Cargando...";

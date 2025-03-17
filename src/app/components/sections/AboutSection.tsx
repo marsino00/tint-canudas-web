@@ -19,7 +19,6 @@ export default function AboutSection() {
           content_type: "aboutSection",
           locale: selectedLocale,
         });
-        console.log("entries", entries);
 
         const mappedData = entries.map((item) => ({
           fields: {
@@ -98,6 +97,7 @@ export default function AboutSection() {
                 src={imageUrl}
                 alt="Nuestra historia"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                 className="object-cover"
               />
             </div>

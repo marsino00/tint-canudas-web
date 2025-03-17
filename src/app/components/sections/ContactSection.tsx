@@ -2,12 +2,59 @@
 
 import { MapPin, Phone, Clock, Instagram } from "lucide-react";
 import Button from "../ui/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { getEntries } from "@/app/lib/contentful";
 
+export interface RichTextNode {
+  nodeType: string;
+  value?: string;
+  marks?: { type: string }[];
+  data?: Record<string, unknown>;
+  content?: RichTextNode[];
+}
+
+export interface RichText {
+  content: RichTextNode[];
+}
+
+export type ContactData = {
+  fields: {
+    address: string;
+    phone: string;
+    schedule: RichText;
+  };
+  sys: {
+    id: string;
+  };
+};
 export default function ContactSection() {
   const t = useTranslations();
+
+  const selectedLocale = useLocale();
+  const [data, setData] = useState<ContactData[]>([]);
+
+  useEffect(() => {
+    async function fetchTestimonials() {
+      const entries = await getEntries({
+        content_type: "contactSection",
+        locale: selectedLocale,
+      });
+      const mappedData = entries.map((item) => ({
+        fields: {
+          address: item.fields.address as string,
+          phone: item.fields.phone as string,
+          schedule: item.fields.schedule as RichText,
+        },
+        sys: {
+          id: item.sys.id,
+        },
+      }));
+      setData(mappedData);
+    }
+    fetchTestimonials();
+  }, [selectedLocale]);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -31,6 +78,11 @@ export default function ContactSection() {
       [e.target.name]: e.target.value,
     });
   };
+
+  const address = data[0]?.fields?.address ?? "Cargando...";
+  const phone = data[0]?.fields?.phone ?? "Cargando...";
+  const schedule =
+    data[0]?.fields?.schedule?.content?.[0]?.content?.[0]?.value ?? "Cargando";
   return (
     <section id="contact" className="py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -72,9 +124,7 @@ export default function ContactSection() {
                 <MapPin className="h-6 w-6 mt-1 text-[#d4b897]" />
                 <div className="ml-4">
                   <h4 className="font-semibold text-lg mb-1">{t("address")}</h4>
-                  <p className="text-gray-700">
-                    Carrer Nou 64, Navarcles, Barcelona
-                  </p>
+                  <p className="text-gray-700">{address}</p>
                 </div>
               </motion.div>
               <motion.div
@@ -87,7 +137,7 @@ export default function ContactSection() {
                 <Phone className="h-6 w-6 mt-1 text-[#d4b897]" />
                 <div className="ml-4">
                   <h4 className="font-semibold text-lg mb-1">{t("phone")}</h4>
-                  <p className="text-gray-700">+34 626 95 25 14</p>
+                  <p className="text-gray-700">{phone}</p>
                 </div>
               </motion.div>
               <motion.div
@@ -102,16 +152,8 @@ export default function ContactSection() {
                   <h4 className="font-semibold text-lg mb-1">
                     {t("schedule")}
                   </h4>
-                  <p className="text-gray-700">
-                    Lunes a Viernes:
-                    <br />
-                    9:00 - 13:00
-                    <br />
-                    17:00 - 20:00
-                    <br />
-                    <span className="text-gray-500">
-                      Fines de semana: Cerrado
-                    </span>
+                  <p className="text-gray-700 whitespace-pre-line">
+                    {schedule}
                   </p>
                 </div>
               </motion.div>

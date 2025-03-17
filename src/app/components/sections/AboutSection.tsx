@@ -1,16 +1,52 @@
 "use client";
 
+import { getEntries } from "@/app/lib/contentful";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { AboutSectionEntry, ContentfulImage } from "@/app/types/data";
 
 export default function AboutSection() {
   const t = useTranslations();
+  const selectedLocale = useLocale();
+  const [data, setData] = useState<AboutSectionEntry[]>([]);
+
+  useEffect(() => {
+    async function fetchWhyData() {
+      try {
+        const entries = await getEntries({
+          content_type: "aboutSection",
+          locale: selectedLocale,
+        });
+        console.log("entries", entries);
+
+        const mappedData = entries.map((item) => ({
+          fields: {
+            aboutText: item.fields.aboutText as string,
+            aboutText2: item.fields.aboutText2 as string,
+            aboutImage: item.fields.aboutImage as ContentfulImage,
+          },
+          sys: {
+            id: item.sys.id,
+          },
+        }));
+        setData(mappedData);
+      } catch (error) {
+        console.error("Error fetching why section data:", error);
+      }
+    }
+    fetchWhyData();
+  }, [selectedLocale]);
+
+  const imageUrl = data[0]?.fields?.aboutImage?.fields?.file?.url
+    ? `https:${data[0].fields.aboutImage.fields.file.url}`
+    : "/jerseis2.jpg";
+
   return (
     <section id="about" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          {/* Columna de texto */}
           <motion.div
             className="order-2 md:order-1"
             initial={{ opacity: 0, x: -50 }}
@@ -35,11 +71,7 @@ export default function AboutSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              Situada en el corazón de Navarcles, Barcelona, Tintorería Canudas
-              se ha consolidado como un referente indiscutible en el cuidado
-              textil de la zona. Nuestro negocio familiar destaca por su enfoque
-              meticuloso y compromiso con la excelencia, ofreciendo tratamientos
-              de limpieza excepcionales para sus prendas más preciadas.
+              {data[0]?.fields?.aboutText ?? "Cargando..."}
             </motion.p>
             <motion.p
               className="text-lg leading-relaxed mb-6 text-gray-700"
@@ -48,11 +80,7 @@ export default function AboutSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Lo que nos diferencia es nuestro personal altamente capacitado y
-              el uso de tecnologías avanzadas en máquinas y productos de
-              limpieza. Cada miembro de nuestro equipo está comprometido no solo
-              con la limpieza, sino también con el mantenimiento de la
-              integridad y longevidad de cada prenda.
+              {data[0]?.fields?.aboutText2 ?? "Cargando..."}
             </motion.p>
           </motion.div>
 
@@ -67,7 +95,7 @@ export default function AboutSection() {
           >
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/jerseis2.jpg"
+                src={imageUrl}
                 alt="Nuestra historia"
                 fill
                 className="object-cover"

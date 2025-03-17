@@ -1,44 +1,68 @@
 "use client";
 
+import { getEntries } from "@/app/lib/contentful";
 import { motion } from "framer-motion";
 import { BadgeCheck, Leaf, Sparkles, Star } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { useState, useEffect, JSX } from "react";
+
+// Definición de tipo para los datos de la sección Why
+export type WhyData = {
+  fields: {
+    title: string;
+    description: string; // mapeado desde "desc"
+    icon: string; // nombre del icono, por ejemplo, "BadgeCheck"
+  };
+  sys: {
+    id: string;
+  };
+};
 
 export default function WhySection() {
   const t = useTranslations();
+  const selectedLocale = useLocale();
+  const [data, setData] = useState<WhyData[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const features = [
-    {
-      icon: <BadgeCheck className="h-12 w-12 text-[#d4b897]" />,
-      title: "Calidad Garantizada",
-      description: "Cuidamos cada prenda con la máxima atención al detalle",
-    },
-    {
-      icon: <Sparkles className="h-12 w-12 text-[#d4b897]" />,
-      title: "Tecnología Avanzada",
-      description:
-        "Utilizamos las últimas tecnologías en limpieza y cuidado textil",
-    },
-    {
-      icon: <Leaf className="h-12 w-12 text-[#d4b897]" />,
-      title: "Eco-Friendly",
-      description:
-        "Comprometidos con el medio ambiente usando productos biodegradables",
-    },
-    {
-      icon: <Star className="h-12 w-12 text-[#d4b897]" />,
-      title: "Experiencia",
-      description: "Más de 20 años de experiencia en el sector",
-    },
-  ];
+  useEffect(() => {
+    async function fetchWhyData() {
+      try {
+        const entries = await getEntries({
+          content_type: "whySection",
+          locale: selectedLocale,
+        });
+        const mappedData = entries.map((item) => ({
+          fields: {
+            title: item.fields.title as string,
+            description: item.fields.desc as string, // usamos "desc" para la descripción
+            icon: item.fields.icon as string,
+          },
+          sys: {
+            id: item.sys.id,
+          },
+        }));
+        setData(mappedData);
+      } catch (error) {
+        console.error("Error fetching why section data:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchWhyData();
+  }, [selectedLocale]);
 
-  // Variantes para animar el contenedor y cada tarjeta
+  // Mapeo de iconos: asocia el nombre recibido con el componente correspondiente
+  const iconMap: Record<string, JSX.Element> = {
+    BadgeCheck: <BadgeCheck className="h-12 w-12 text-[#d4b897]" />,
+    Sparkles: <Sparkles className="h-12 w-12 text-[#d4b897]" />,
+    Leaf: <Leaf className="h-12 w-12 text-[#d4b897]" />,
+    Star: <Star className="h-12 w-12 text-[#d4b897]" />,
+  };
+
   const containerVariants = {
     hidden: {},
     visible: {
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
@@ -46,6 +70,16 @@ export default function WhySection() {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
+
+  if (loading) {
+    return (
+      <section id="why-choose-us" className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-xl text-gray-600">Loading...</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="why-choose-us" className="py-16 bg-white">
@@ -57,7 +91,7 @@ export default function WhySection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            {t("navbar.why-choose-us")}
+            {t("navbar.why-choose-us") || "Per què escollir-nos?"}
           </motion.h2>
           <div className="w-24 h-1 bg-[#d4b897] mx-auto mb-6"></div>
           <motion.p
@@ -69,6 +103,7 @@ export default function WhySection() {
             Descobreix per què la nostra dedicació i qualitat ens diferencien.
           </motion.p>
         </div>
+
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
@@ -76,18 +111,31 @@ export default function WhySection() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {features.map((feature, index) => (
+          {data.length > 0 ? (
+            data.map((feature) => (
+              <motion.div
+                key={feature.sys.id}
+                className="text-center p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl"
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="flex justify-center mb-4">
+                  {iconMap[feature.fields.icon] || null}
+                </div>
+                <h2 className="text-xl font-semibold mb-2">
+                  {feature.fields.title}
+                </h2>
+                <p className="text-gray-600">{feature.fields.description}</p>
+              </motion.div>
+            ))
+          ) : (
             <motion.div
-              key={index}
-              className="text-center p-6 rounded-lg shadow-lg transition-all duration-300"
+              className="col-span-full text-center text-gray-600"
               variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
             >
-              <div className="flex justify-center mb-4">{feature.icon}</div>
-              <h2 className="text-xl font-semibold mb-2">{feature.title}</h2>
-              <p className="text-gray-600">{feature.description}</p>
+              No hi ha dades disponibles.
             </motion.div>
-          ))}
+          )}
         </motion.div>
       </div>
     </section>

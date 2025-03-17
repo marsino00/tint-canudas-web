@@ -1,43 +1,56 @@
 "use client";
 
+import { getEntries } from "@/app/lib/contentful";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-import { useTranslations } from "next-intl";
-import React from "react";
+import { useLocale, useTranslations } from "next-intl";
+import React, { useEffect, useState } from "react";
+
+export type TestimonialData = {
+  fields: {
+    opinion: string;
+    reviewAuthor: string;
+    stars: number;
+  };
+  sys: {
+    id: string;
+  };
+};
 
 export default function TestimonialSection() {
   const t = useTranslations();
-  const testimonials = [
-    {
-      name: "Marta",
-      comment:
-        "Excelente servicio, mi ropa quedó impecable. ¡Repetiré sin duda!",
-    },
-    {
-      name: "Carlos",
-      comment:
-        "Trato muy profesional y cercano. Se nota la experiencia del equipo.",
-    },
-    {
-      name: "Laura",
-      comment: "Respetuosos con el medio ambiente y con un resultado perfecto.",
-    },
-    {
-      name: "Juan",
-      comment: "La calidad y rapidez son insuperables. Muy recomendable.",
-    },
-    {
-      name: "Ana",
-      comment:
-        "Atención impecable, siempre confío en ellos para mi ropa más delicada.",
-    },
-  ];
+  const selectedLocale = useLocale();
+  const [testimonials, setTestimonials] = useState<TestimonialData[]>([]);
 
-  const testimonialLoop = [...testimonials, ...testimonials];
+  useEffect(() => {
+    async function fetchTestimonials() {
+      const entries = await getEntries({
+        content_type: "testimonialSection",
+        locale: selectedLocale,
+      });
+      const mappedData = entries.map((item) => ({
+        fields: {
+          opinion: item.fields.opinion as string,
+          reviewAuthor: item.fields.reviewAuthor as string,
+          stars: item.fields.stars as number,
+        },
+        sys: {
+          id: item.sys.id,
+        },
+      }));
+      setTestimonials(mappedData);
+    }
+    fetchTestimonials();
+  }, [selectedLocale]);
+
+  // Duplicamos el array para un slider continuo (si hay datos)
+  const testimonialLoop =
+    testimonials.length > 0 ? [...testimonials, ...testimonials] : [];
 
   return (
     <section id="testimonials" className="py-24 bg-[#d4b897]/5 relative">
       <div className="container mx-auto px-4">
+        {/* Encabezado */}
         <motion.div
           className="text-center max-w-2xl mx-auto mb-16"
           initial={{ opacity: 0, y: -10 }}
@@ -46,15 +59,15 @@ export default function TestimonialSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold text-black mb-4">
-            {t("navbar.testimonials")}
+            {t("navbar.testimonials") || "Testimonis"}
           </h2>
           <div className="w-24 h-1 bg-[#d4b897] mx-auto mb-6"></div>
           <p className="text-xl text-gray-600">
-            El que opinen els nostres clients sobre nosaltres
+            El que opinin els nostres clients sobre nosaltres
           </p>
         </motion.div>
 
-        {/* Contenedor del slider */}
+        {/* Slider de testimonis */}
         <div className="overflow-hidden">
           <motion.div
             className="flex space-x-8"
@@ -67,28 +80,30 @@ export default function TestimonialSection() {
           >
             {testimonialLoop.map((testimonial, index) => (
               <motion.div
-                key={index}
+                key={`${testimonial.sys.id}-${index}`}
                 className="min-w-[300px] bg-white p-6 shadow-lg rounded-lg flex flex-col justify-between hover:shadow-xl transition-all duration-300"
                 whileHover={{ scale: 1.03 }}
               >
-                {/* Fila de 5 estrellas filled */}
+                {/* Fila de estrellas (rellenadas según el número de stars) */}
                 <div className="flex justify-center mb-4 text-[#d4b897]">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star
-                      key={i}
-                      fill="currentColor"
-                      stroke="none"
-                      className="h-5 w-5"
-                    />
-                  ))}
+                  {Array.from({ length: testimonial.fields.stars }).map(
+                    (_, i) => (
+                      <Star
+                        key={i}
+                        fill="currentColor"
+                        stroke="none"
+                        className="h-5 w-5"
+                      />
+                    )
+                  )}
                 </div>
-                {/* Comentario */}
+                {/* Opinión */}
                 <p className="text-gray-700 italic mb-4">
-                  “{testimonial.comment}”
+                  “{testimonial.fields.opinion}”
                 </p>
-                {/* Nombre */}
+                {/* Autor de la review */}
                 <h4 className="mt-auto font-semibold text-black text-center">
-                  — {testimonial.name}
+                  — {testimonial.fields.reviewAuthor}
                 </h4>
               </motion.div>
             ))}

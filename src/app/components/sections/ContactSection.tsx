@@ -1,0 +1,252 @@
+"use client";
+
+import { MapPin, Phone, Clock, Instagram } from "lucide-react";
+import Button from "../ui/Button";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+
+export default function ContactSection() {
+  const t = useTranslations();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log(formData);
+    alert("Mensaje enviado correctamente");
+    setFormData({ name: "", email: "", phone: "", message: "" });
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  return (
+    <section id="contact" className="py-24 bg-white">
+      <div className="container mx-auto px-4">
+        <motion.div
+          className="text-center max-w-2xl mx-auto mb-16"
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl font-bold text-black mb-4">
+            {t("navbar.contact")}
+          </h2>
+          <div className="w-24 h-1 bg-[#d4b897] mx-auto mb-6"></div>
+          <p className="text-xl text-gray-600">
+            Estàs interessat en els nostres serveis? Contacta amb nosaltres i
+            t&apos;ajudarem a trobar la millor opció per a les teves
+            necessitats.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <motion.div
+            className="p-8 shadow-xl border-0"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-bold mb-8">Información de contacto</h3>
+            <div className="space-y-6">
+              <motion.div
+                className="flex items-start"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <MapPin className="h-6 w-6 mt-1 text-[#d4b897]" />
+                <div className="ml-4">
+                  <h4 className="font-semibold text-lg mb-1">{t("address")}</h4>
+                  <p className="text-gray-700">
+                    Carrer Nou 64, Navarcles, Barcelona
+                  </p>
+                </div>
+              </motion.div>
+              <motion.div
+                className="flex items-start"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Phone className="h-6 w-6 mt-1 text-[#d4b897]" />
+                <div className="ml-4">
+                  <h4 className="font-semibold text-lg mb-1">{t("phone")}</h4>
+                  <p className="text-gray-700">+34 626 95 25 14</p>
+                </div>
+              </motion.div>
+              <motion.div
+                className="flex items-start"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <Clock className="h-6 w-6 mt-1 text-[#d4b897]" />
+                <div className="ml-4">
+                  <h4 className="font-semibold text-lg mb-1">
+                    {t("schedule")}
+                  </h4>
+                  <p className="text-gray-700">
+                    Lunes a Viernes:
+                    <br />
+                    9:00 - 13:00
+                    <br />
+                    17:00 - 20:00
+                    <br />
+                    <span className="text-gray-500">
+                      Fines de semana: Cerrado
+                    </span>
+                  </p>
+                </div>
+              </motion.div>
+              <motion.div
+                className="flex items-start"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <Instagram className="h-6 w-6 mt-1 text-[#d4b897]" />
+                <div className="ml-4">
+                  <h4 className="font-semibold text-lg mb-1">Instagram</h4>
+                  <a
+                    href="https://www.instagram.com/tintoreriacanudas/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#d4b897] hover:text-[#c5a988] transition-colors duration-300"
+                  >
+                    @tintoreriacanudas
+                  </a>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="p-8 shadow-xl border-0"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-bold mb-8">
+              {t("contact-form.title")}
+            </h3>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  {t("contact-form.name")}
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:border-[#d4b897] focus:ring-1 focus:ring-[#d4b897] transition"
+                  required
+                  placeholder={t("contact-form.placeholder.name")}
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  {t("contact-form.email")}
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:border-[#d4b897] focus:ring-1 focus:ring-[#d4b897] transition"
+                  required
+                  placeholder={t("contact-form.placeholder.email")}
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  {t("phone")}
+                </label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:border-[#d4b897] focus:ring-1 focus:ring-[#d4b897] transition"
+                  required
+                  placeholder="666 66 66 66"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  {t("contact-form.message")}
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:border-[#d4b897] focus:ring-1 focus:ring-[#d4b897] transition"
+                  required
+                  placeholder={t("contact-form.placeholder.message")}
+                />
+              </div>
+              <Button
+                type="submit"
+                className="w-full bg-[#d4b897] text-black hover:bg-[#c5a988] transition-colors"
+              >
+                {t("contact-form.send")}
+              </Button>
+            </form>
+          </motion.div>
+        </div>
+
+        <motion.div
+          className="relative h-[400px] rounded-lg overflow-hidden shadow-xl"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.4770452461654!2d1.9012263!3d41.7483844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4f1b7c4b5c761%3A0x1c0a6f5f1f9b0c0a!2sCarrer%20Nou%2C%2064%2C%2008270%20Navarcles%2C%20Barcelona!5e0!3m2!1sen!2ses!4v1650000000000!5m2!1sen!2ses"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+          ></iframe>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

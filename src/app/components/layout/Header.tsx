@@ -22,8 +22,8 @@ export default function Header() {
   return (
     <header className="fixed w-full bg-white z-50 shadow-sm h-20">
       <div className="w-full px-4 flex justify-between items-center h-full shadow-2xl">
-        <Link href="/" className="flex items-center">
-          <div className="rounded-full p-1 transition-transform duration-300 hover:scale-110">
+        <Link href="#hero" className="flex items-center">
+          <div className="p-1 transition-transform duration-300 hover:scale-110">
             <Image
               className="cursor-pointer h-18 w-auto"
               priority

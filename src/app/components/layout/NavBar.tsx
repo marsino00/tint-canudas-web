@@ -18,6 +18,7 @@ export default function NavBar({
   const t = useTranslations("navbar");
 
   const links = [
+    { href: "/#why-choose-us", label: t("why-choose-us") },
     { href: "/#services", label: t("services") },
     { href: "/#about", label: t("about") },
     { href: "/#testimonials", label: t("testimonials") },

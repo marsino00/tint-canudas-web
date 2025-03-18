@@ -5,7 +5,6 @@ export async function POST(request: Request) {
   try {
     const { name, email, phone, message } = await request.json();
 
-    // Crea el transporte SMTP con tus credenciales
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
@@ -16,17 +15,16 @@ export async function POST(request: Request) {
       },
     });
 
-    // Envía el correo
     await transporter.sendMail({
-      from: `"${name}" <${email}>`, // Remitente (puede ser el usuario)
-      to: process.env.CONTACT_EMAIL, // Destinatario (tu correo)
-      subject: `Nuevo mensaje de contacto de ${name}`,
+      from: `"${name}" <${email}>`,
+      to: process.env.CONTACT_EMAIL,
+      subject: `Nou missatge de contacte de ${name}`,
       text: `
-        Has recibido un mensaje de contacto:
-        Nombre: ${name}
+        Has rebut un missatge de contacte:
+        Nom: ${name}
         Email: ${email}
-        Teléfono: ${phone}
-        Mensaje: ${message}
+        Telèfon: ${phone}
+        Missatge: ${message}
       `,
       html: `
         <p>Algú vol contactar amb vosaltres desde la pàgina web:</p>

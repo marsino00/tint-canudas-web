@@ -107,7 +107,7 @@ export default function ServicesSection() {
                 variants={cardVariants}
                 whileHover={{ scale: 1.03 }}
               >
-                <div className="relative h-50">
+                <div className="relative h-[250px]">
                   <Image
                     src={imageSrc}
                     alt={service.fields.title}

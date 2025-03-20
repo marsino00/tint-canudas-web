@@ -27,11 +27,11 @@ export default function Header() {
           className="flex items-center p-1 transition-transform duration-300 hover:scale-110"
         >
           <Image
-            className="cursor-pointer h-18 w-auto"
+            className="cursor-pointer h-16 w-auto"
             priority
             src="/logo.png"
-            width={478}
-            height={478}
+            width={300}
+            height={50}
             alt="Logo de Tintorería Canudas"
           />
         </Link>

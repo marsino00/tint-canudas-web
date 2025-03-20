@@ -20,19 +20,20 @@ export default function Header() {
     "md:hidden bg-white border-t border-gray-200 px-10 py-4 flex flex-col space-y-4";
 
   return (
-    <header className="fixed w-full bg-white z-50 shadow-sm h-20">
-      <div className="w-full px-4 flex justify-between items-center h-full shadow-2xl">
-        <Link href="#hero" className="flex items-center">
-          <div className="p-1 transition-transform duration-300 hover:scale-110">
-            <Image
-              className="cursor-pointer h-18 w-auto"
-              priority
-              src="/logo.png"
-              width={478}
-              height={478}
-              alt="Logo de Tintorería Canudas"
-            />
-          </div>
+    <header className="fixed w-full bg-white z-50 shadow-2xl">
+      <div className="w-full px-2 flex items-center justify-between">
+        <Link
+          href="#hero"
+          className="flex items-center p-1 transition-transform duration-300 hover:scale-110"
+        >
+          <Image
+            className="cursor-pointer h-18 w-auto"
+            priority
+            src="/logo.png"
+            width={478}
+            height={478}
+            alt="Logo de Tintorería Canudas"
+          />
         </Link>
 
         {/* Desktop Nav */}

@@ -34,34 +34,35 @@
     "text1": "PROGRAMA KIT DIGITAL FINANCIADO POR LOS FONDOS NEXT GENERATION DEL MECANISMO DE RECUPERACIÓN Y RESILIENCIA",
     "legal-advice": "Aviso legal",
     "privacy-policy": "Política de privacidad",
-    "cookies-policy": "Política de cookies"
+    "cookies-policy": "Política de cookies",
+    "accesibilidad": "Declaración de Accesibilidad"
   },
   "aviso-legal": {
     "title": "AVISO LEGAL Y CONDICIONES GENERALES DE USO",
     "section1Title": "I. INFORMACIÓN GENERAL",
     "section1P1": "En cumplimiento con el deber de información dispuesto en la Ley 34/2002 de Servicios de la Sociedad de la Información y el Comercio Electrónico (LSSI-CE) de 11 de julio, a continuación se facilitan los datos de información general de este sitio web:",
-    "section1P2": "La titularidad de este sitio web, https://efasol.com/ (en adelante, Sitio Web) la ostenta: Albert Espelt Font, con NIF 77477030N, y cuyos datos de contacto son:",
-    "section1ListItem1": "Dirección: Carrer Montsant, 6, 08272 Sant Fruitós de Bages, Barcelona, España",
-    "section1ListItem2": "Teléfono de contacto: +34 661 52 35 09",
-    "section1ListItem3": "Correo electrónico de contacto: info@efasol.com",
+    "section1P2": "La titularidad de este sitio web, https://tintoreriacanudas.com/ (en adelante, Sitio Web) la ostenta: Sílvia Canudas, con NIF 39342730B, y cuyos datos de contacto son:",
+    "section1ListItem1": "Dirección: Carrer Nou 64, Navarcles, Barcelona",
+    "section1ListItem2": "Teléfono de contacto: +34 626 95 25 14",
+    "section1ListItem3": "Correo electrónico de contacto: tintoreriacanudas@gmail.com",
     "section2Title": "II. TÉRMINOS Y CONDICIONES GENERALES DE USO",
     "section2P1": "El objeto de las presentes Condiciones es regular el acceso y la utilización del Sitio Web. Se entenderá como Sitio Web la apariencia externa de las interfaces de pantalla, tanto de forma estática como dinámica, es decir, el árbol de navegación; y todos los elementos integrados en dichas interfaces (en adelante, Contenidos), así como todos aquellos servicios o recursos en línea que se ofrezcan a los Usuarios (en adelante, Servicios).",
-    "section2P2": "Efasol se reserva la facultad de modificar, en cualquier momento y sin previo aviso, la presentación y configuración del Sitio Web, así como de los Contenidos y Servicios que en él puedan estar incorporados. El Usuario reconoce y acepta que en cualquier momento Efasol pueda interrumpir, desactivar y/o cancelar cualquiera de estos elementos o el acceso a los mismos.",
+    "section2P2": "TintoreriaCanudas se reserva la facultad de modificar, en cualquier momento y sin previo aviso, la presentación y configuración del Sitio Web, así como de los Contenidos y Servicios que en él puedan estar incorporados. El Usuario reconoce y acepta que en cualquier momento tintoreriacanudas pueda interrumpir, desactivar y/o cancelar cualquiera de estos elementos o el acceso a los mismos.",
     "section2P3": "El acceso al Sitio Web por parte del Usuario tiene carácter libre y, por regla general, es gratuito, salvo en lo relativo al coste de conexión a través de la red de telecomunicaciones suministrada por el proveedor de acceso.",
-    "section2P4": "Algunos de los Contenidos o Servicios ofrecidos por Efasol o terceros pueden estar sujetos a contratación previa, en cuyo caso se especificará de manera clara y se pondrán a disposición del Usuario las correspondientes condiciones generales o particulares.",
+    "section2P4": "Algunos de los Contenidos o Servicios ofrecidos por tintoreriacanudas o terceros pueden estar sujetos a contratación previa, en cuyo caso se especificará de manera clara y se pondrán a disposición del Usuario las correspondientes condiciones generales o particulares.",
     "section2P5": "El acceso, la navegación y el uso del Sitio Web, así como la participación en espacios de interacción, confieren la condición de Usuario, por lo que, desde el inicio de la navegación, se aceptan todas las presentes Condiciones y sus futuras modificaciones.",
     "section3Title": "III. ACCESO Y NAVEGACIÓN EN EL SITIO WEB: EXCLUSIÓN DE GARANTÍAS Y RESPONSABILIDAD",
-    "section3P1": "Efasol no garantiza la continuidad, disponibilidad y utilidad del Sitio Web ni de los Contenidos o Servicios. Hará todo lo posible por mantener el correcto funcionamiento, pero no se responsabiliza por interrupciones o errores, ni garantiza que el contenido o software accesible esté libre de errores o cause daños al sistema informático del Usuario.",
-    "section3P2": "En ningún caso Efasol será responsable por pérdidas, daños o perjuicios derivados del acceso, navegación o uso del Sitio Web.",
+    "section3P1": "TintoreriaCanudas no garantiza la continuidad, disponibilidad y utilidad del Sitio Web ni de los Contenidos o Servicios. Hará todo lo posible por mantener el correcto funcionamiento, pero no se responsabiliza por interrupciones o errores, ni garantiza que el contenido o software accesible esté libre de errores o cause daños al sistema informático del Usuario.",
+    "section3P2": "En ningún caso TintoreriaCanudas será responsable por pérdidas, daños o perjuicios derivados del acceso, navegación o uso del Sitio Web.",
     "section4Title": "IV. POLÍTICA DE ENLACES",
-    "section4P1": "El Sitio Web puede poner a disposición del Usuario enlaces, banners y botones que permiten acceder a sitios web de terceros. La presencia de estos enlaces no implica la aprobación o recomendación de tales sitios, ni Efasol asume responsabilidad por el contenido, veracidad o legalidad de los mismos.",
-    "section4P2": "El establecimiento de un enlace no implica relación comercial alguna entre Efasol y el titular del sitio web enlazado.",
+    "section4P1": "El Sitio Web puede poner a disposición del Usuario enlaces, banners y botones que permiten acceder a sitios web de terceros. La presencia de estos enlaces no implica la aprobación o recomendación de tales sitios, ni tintoreriacanudas@gmail.com asume responsabilidad por el contenido, veracidad o legalidad de los mismos.",
+    "section4P2": "El establecimiento de un enlace no implica relación comercial alguna entre tintoreriacanudas y el titular del sitio web enlazado.",
     "section5Title": "V. PROPIEDAD INTELECTUAL E INDUSTRIAL",
-    "section5P1": "Efasol, por sí o como parte cesionaria, es titular de todos los derechos de propiedad intelectual e industrial del Sitio Web y de los elementos que en él se integran (incluyendo imágenes, sonido, audio, vídeo, software, textos, marcas, logotipos, etc.). Estos contenidos están protegidos por la normativa española, comunitaria e internacional.",
-    "section5P2": "Queda expresamente prohibida la reproducción, distribución y comunicación pública, total o parcial, de los contenidos del Sitio Web con fines comerciales, sin la autorización expresa de Efasol.",
+    "section5P1": "TintoreriaCanudas, por sí o como parte cesionaria, es titular de todos los derechos de propiedad intelectual e industrial del Sitio Web y de los elementos que en él se integran (incluyendo imágenes, sonido, audio, vídeo, software, textos, marcas, logotipos, etc.). Estos contenidos están protegidos por la normativa española, comunitaria e internacional.",
+    "section5P2": "Queda expresamente prohibida la reproducción, distribución y comunicación pública, total o parcial, de los contenidos del Sitio Web con fines comerciales, sin la autorización expresa de TintoreriaCanudas.",
     "section5P3": "El Usuario se compromete a respetar estos derechos y podrá visualizar, imprimir o copiar los contenidos únicamente para uso personal.",
     "section6Title": "VI. ACCIONES LEGALES, LEGISLACIÓN APLICABLE Y JURISDICCIÓN",
-    "section6P1": "Efasol se reserva el derecho de emprender acciones legales en caso de uso indebido del Sitio Web y de sus Contenidos. La relación entre el Usuario y Efasol se regirá por la normativa española, sometiéndose a la jurisdicción de los tribunales competentes en España."
+    "section6P1": "TintoreriaCanudas se reserva el derecho de emprender acciones legales en caso de uso indebido del Sitio Web y de sus Contenidos. La relación entre el Usuario y TintoreriaCanudas se regirá por la normativa española, sometiéndose a la jurisdicción de los tribunales competentes en España."
   },
   "politica-cookies": {
     "title": "POLÍTICA DE COOKIES",
@@ -108,14 +109,14 @@
   "politica-privacidad": {
     "title": "POLÍTICA DE PRIVACIDAD",
     "section1Title": "1. Introducción",
-    "section1P1": "En Efasol (en adelante, “la Empresa”) estamos comprometidos con la protección de la privacidad y el tratamiento adecuado de los datos personales de nuestros usuarios. La presente Política de Privacidad describe cómo recopilamos, utilizamos y protegemos la información que nos proporcionas al utilizar nuestro sitio web efasol.com (en adelante, “el Sitio”).",
+    "section1P1": "En TintoreriaCanudas (en adelante, “la Empresa”) estamos comprometidos con la protección de la privacidad y el tratamiento adecuado de los datos personales de nuestros usuarios. La presente Política de Privacidad describe cómo recopilamos, utilizamos y protegemos la información que nos proporcionas al utilizar nuestro sitio web TintoreriaCanudas.com (en adelante, “el Sitio”).",
     "section1P2": "Al acceder y utilizar el Sitio, reconoces haber leído y aceptado los términos de esta Política de Privacidad.",
     "section2Title": "2. Responsable del Tratamiento",
-    "section2ListItem1": "Responsable: EFASOL Energies Renovables",
-    "section2ListItem2": "Dirección: Carrer Montsant, 6, 08272 Sant Fruitós de Bages, Barcelona, España",
-    "section2ListItem3": "CIF/NIF: 77477030N",
-    "section2ListItem4": "Correo electrónico de contacto: info@efasol.com",
-    "section2ListItem5": "Teléfono: +34 661523509",
+    "section2ListItem1": "Responsable: TintoreriaCanudas",
+    "section2ListItem2": "Dirección: Carrer Nou 64, Navarcles, Barcelona",
+    "section2ListItem3": "CIF/NIF: 39342730B",
+    "section2ListItem4": "Correo electrónico de contacto: tintoreriacanudas@gmail.com",
+    "section2ListItem5": "Teléfono: +34 626 95 25 14",
     "section3Title": "3. Datos Personales Recopilados",
     "section3P1": "Podemos recopilar datos personales de los usuarios cuando:",
     "section3ListItem1": "Rellenan formularios de contacto, suscripción a newsletters o solicitan información (por ejemplo, nombre, email, teléfono).",
@@ -140,10 +141,128 @@
     "section8ListItem4": "Oposición: negarse al tratamiento de sus datos por motivos personales o cuando sea para fines de marketing directo.",
     "section8ListItem5": "Limitación del tratamiento: solicitar la restricción temporal del uso de los datos en determinadas circunstancias.",
     "section8ListItem6": "Portabilidad: recibir los datos en un formato estructurado, de uso común y lectura mecánica.",
-    "section8P2": "Para ejercer estos derechos, el usuario puede contactar al email: info@efasol.com, indicando claramente qué derecho desea ejercer y aportando copia de un documento identificativo.",
+    "section8P2": "Para ejercer estos derechos, el usuario puede contactar al email: tintoreriacanudas@gmail.com, indicando claramente qué derecho desea ejercer y aportando copia de un documento identificativo.",
     "section9Title": "9. Medidas de Seguridad",
     "section9P1": "La Empresa aplica medidas técnicas y organizativas adecuadas para proteger los datos personales contra pérdida, uso indebido, acceso no autorizado, divulgación o alteración. Sin embargo, ningún sistema es completamente seguro; si detectamos cualquier brecha de seguridad, lo notificaremos a las autoridades competentes y a los usuarios afectados, de conformidad con la normativa aplicable.",
     "section10Title": "10. Cambios en la Política de Privacidad",
     "section10P1": "Nos reservamos el derecho de actualizar o modificar esta Política de Privacidad en cualquier momento. Los cambios serán efectivos desde su publicación en el Sitio. Recomendamos a los usuarios revisar periódicamente esta sección."
+  },
+  "accessibility": {
+    "title": "Declaración de Accesibilidad",
+    "commitment": {
+      "title": "Compromiso con la accesibilidad",
+      "content": "Tintorería Canudas se compromete a hacer que su sitio web sea accesible para todos los usuarios, independientemente de sus capacidades o de la tecnología que utilicen. Trabajamos continuamente para mejorar la usabilidad y accesibilidad de nuestro sitio web y cumplir con las directrices de accesibilidad reconocidas internacionalmente."
+    },
+    "standard": {
+      "title": "Estándar de conformidad",
+      "content": "Este sitio web se esfuerza por cumplir con el nivel AA de las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.1, publicadas por el W3C, así como con el Real Decreto 1112/2018 sobre accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector público en España."
+    },
+    "measures": {
+      "title": "Medidas adoptadas",
+      "intro": "Para garantizar la accesibilidad de nuestro sitio web, hemos implementado las siguientes medidas:",
+      "navigation": {
+        "title": "Navegación y estructura",
+        "items": {
+          "0": "Estructura HTML semántica clara para facilitar la navegación mediante lectores de pantalla",
+          "1": "Jerarquía de encabezados lógica y coherente",
+          "2": "Enlaces con texto descriptivo que indican claramente su destino",
+          "3": "Mecanismo de \"saltar al contenido principal\" para usuarios de teclado",
+          "4": "Navegación consistente en todas las páginas"
+        }
+      },
+      "visual": {
+        "title": "Diseño visual y legibilidad",
+        "items": {
+          "0": "Contraste de color suficiente entre el texto y el fondo (mínimo 4.5:1 para texto normal)",
+          "1": "Posibilidad de ampliar el texto hasta un 200% sin pérdida de contenido",
+          "2": "Diseño responsive que se adapta a diferentes dispositivos y tamaños de pantalla",
+          "3": "No se utiliza el color como único medio para transmitir información"
+        }
+      },
+      "operability": {
+        "title": "Operabilidad",
+        "items": {
+          "0": "Todas las funcionalidades están disponibles mediante teclado",
+          "1": "Tiempo suficiente para leer y utilizar el contenido",
+          "2": "No se utiliza contenido que pueda provocar convulsiones o reacciones físicas",
+          "3": "Indicadores visuales claros de enfoque para la navegación con teclado"
+        }
+      },
+      "multimedia": {
+        "title": "Contenido multimedia",
+        "items": {
+          "0": "Textos alternativos para imágenes informativas",
+          "1": "Subtítulos para contenidos de audio y vídeo pregrabados",
+          "2": "Transcripciones para contenidos de audio"
+        }
+      },
+      "forms": {
+        "title": "Formularios y entrada de datos",
+        "items": {
+          "0": "Etiquetas descriptivas para todos los campos de formulario",
+          "1": "Instrucciones claras para la cumplimentación de formularios",
+          "2": "Identificación y descripción de errores en la entrada de datos",
+          "3": "Mecanismos para verificar, corregir o confirmar información sensible"
+        }
+      }
+    },
+    "status": {
+      "title": "Estado actual de conformidad",
+      "content1": "Nos esforzamos por mantener un alto nivel de accesibilidad, sin embargo, debido a la naturaleza dinámica del contenido web, es posible que algunas páginas o funcionalidades no cumplan plenamente con todos los criterios de accesibilidad.",
+      "content2": "Actualmente, las siguientes áreas pueden presentar problemas de accesibilidad que estamos trabajando para resolver:",
+      "issues": {
+        "0": "Algunos documentos PDF antiguos pueden no estar completamente optimizados para lectores de pantalla",
+        "1": "Algunos elementos de terceros integrados pueden presentar barreras de accesibilidad fuera de nuestro control directo"
+      }
+    },
+    "evaluation": {
+      "title": "Evaluación de la accesibilidad",
+      "content": "La accesibilidad de nuestro sitio web se evalúa regularmente a través de:",
+      "methods": {
+        "0": "Pruebas automáticas utilizando herramientas como Lighthouse y WAVE",
+        "1": "Evaluaciones manuales por nuestro equipo de desarrollo",
+        "2": "Pruebas de usuario con personas que utilizan tecnologías de asistencia"
+      }
+    },
+    "contact": {
+      "title": "Contacto y feedback",
+      "content": "Valoramos sus comentarios sobre la accesibilidad de este sitio web. Si encuentra algún problema o barrera de accesibilidad, o si tiene sugerencias para mejorar la accesibilidad, por favor contáctenos:",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "contactForm": "Formulario de contacto"
+    },
+    "compliance": {
+      "title": "Procedimiento de cumplimiento",
+      "content1": "Nos comprometemos a responder a todos los informes de problemas de accesibilidad en un plazo máximo de 15 días hábiles y a trabajar diligentemente para resolver cualquier problema identificado en un tiempo razonable.",
+      "content2": "Si no está satisfecho con nuestra respuesta, puede contactar con la autoridad encargada de hacer cumplir la legislación sobre accesibilidad en España:",
+      "authorities": {
+        "0": "Ministerio de Asuntos Económicos y Transformación Digital",
+        "1": "Observatorio de Accesibilidad Web"
+      }
+    },
+    "preparation": {
+      "title": "Preparación de esta declaración",
+      "prepared": "Esta declaración fue preparada el",
+      "lastReview": "La última revisión de esta declaración se realizó el"
+    },
+    "resources": {
+      "title": "Recursos adicionales",
+      "content": "Para más información sobre accesibilidad web, recomendamos los siguientes recursos:",
+      "links": {
+        "0": {
+          "text": "Web Content Accessibility Guidelines (WCAG)",
+          "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+        },
+        "1": {
+          "text": "Web Accessibility Initiative (WAI)",
+          "url": "https://www.w3.org/WAI/"
+        },
+        "2": {
+          "text": "Legislación española sobre accesibilidad web",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-12699"
+        }
+      }
+    },
+    "skipLink": "Saltar al contenido principal"
   }
 }

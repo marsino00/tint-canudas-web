@@ -66,6 +66,9 @@ export default function Footer() {
           <Link href="/politica-cookies" className="hover:text-gray-900">
             {t("cookies-policy")}
           </Link>
+          <Link href="/accesibilidad" className="hover:text-gray-900">
+            {t("accesibilidad")}
+          </Link>
         </div>
       </div>
     </footer>

@@ -34,7 +34,8 @@
     "text1": "PROGRAMA KIT DIGITAL FINANÇAT PELS FONS NEXT GENERATION DEL MECANISME DE RECUPERACIÓ I RESILIÈNCIA",
     "legal-advice": "Avís legal",
     "privacy-policy": "Política de privacitat",
-    "cookies-policy": "Política de cookies"
+    "cookies-policy": "Política de cookies",
+    "accesibilidad": "Declaració d'accessibilitat"
   },
   "aviso-legal": {
     "title": "AVÍS LEGAL I CONDICIONS GENERALS D'ÚS",
@@ -145,5 +146,123 @@
     "section9P1": "L'Empresa aplica mesures tècniques i organitzatives adequades per protegir les dades personals contra pèrdua, ús indegut, accés no autoritzat, divulgació o alteració. Tot i això, cap sistema és completament segur; si detectem qualsevol bretxa de seguretat, ho notificarem a les autoritats competents i als usuaris afectats, de conformitat amb la normativa aplicable.",
     "section10Title": "10. Canvis en la Política de Privacitat",
     "section10P1": "Ens reservem el dret d'actualitzar o modificar aquesta Política de Privacitat en qualsevol moment. Els canvis seran efectius des de la seva publicació al Lloc. Recomanem als usuaris revisar periòdicament aquesta secció."
+  },
+  "accessibility": {
+    "title": "Declaració d'Accessibilitat",
+    "commitment": {
+      "title": "Compromís amb l'accessibilitat",
+      "content": "TintoreriaCanudas es compromet a fer que el seu lloc web sigui accessible per a tots els usuaris, independentment de les seves capacitats o de la tecnologia que utilitzin. Treballem contínuament per millorar la usabilitat i accessibilitat del nostre lloc web i complir amb les directrius d'accessibilitat reconegudes internacionalment."
+    },
+    "standard": {
+      "title": "Estàndard de conformitat",
+      "content": "Aquest lloc web s'esforça per complir amb el nivell AA de les Pautes d'Accessibilitat per al Contingut Web (WCAG) 2.1, publicades pel W3C, així com amb el Reial Decret 1112/2018 sobre accessibilitat dels llocs web i aplicacions per a dispositius mòbils del sector públic a Espanya."
+    },
+    "measures": {
+      "title": "Mesures adoptades",
+      "intro": "Per garantir l'accessibilitat del nostre lloc web, hem implementat les següents mesures:",
+      "navigation": {
+        "title": "Navegació i estructura",
+        "items": {
+          "0": "Estructura HTML semàntica clara per facilitar la navegació mitjançant lectors de pantalla",
+          "1": "Jerarquia d'encapçalaments lògica i coherent",
+          "2": "Enllaços amb text descriptiu que indiquen clarament la seva destinació",
+          "3": "Mecanisme de \"saltar al contingut principal\" per a usuaris de teclat",
+          "4": "Navegació consistent en totes les pàgines"
+        }
+      },
+      "visual": {
+        "title": "Disseny visual i llegibilitat",
+        "items": {
+          "0": "Contrast de color suficient entre el text i el fons (mínim 4.5:1 per a text normal)",
+          "1": "Possibilitat d'ampliar el text fins a un 200% sense pèrdua de contingut",
+          "2": "Disseny responsive que s'adapta a diferents dispositius i mides de pantalla",
+          "3": "No s'utilitza el color com a únic mitjà per transmetre informació"
+        }
+      },
+      "operability": {
+        "title": "Operabilitat",
+        "items": {
+          "0": "Totes les funcionalitats estan disponibles mitjançant teclat",
+          "1": "Temps suficient per llegir i utilitzar el contingut",
+          "2": "No s'utilitza contingut que pugui provocar convulsions o reaccions físiques",
+          "3": "Indicadors visuals clars d'enfocament per a la navegació amb teclat"
+        }
+      },
+      "multimedia": {
+        "title": "Contingut multimèdia",
+        "items": {
+          "0": "Textos alternatius per a imatges informatives",
+          "1": "Subtítols per a continguts d'àudio i vídeo pregravats",
+          "2": "Transcripcions per a continguts d'àudio"
+        }
+      },
+      "forms": {
+        "title": "Formularis i entrada de dades",
+        "items": {
+          "0": "Etiquetes descriptives per a tots els camps de formulari",
+          "1": "Instruccions clares per a l'emplenament de formularis",
+          "2": "Identificació i descripció d'errors en l'entrada de dades",
+          "3": "Mecanismes per verificar, corregir o confirmar informació sensible"
+        }
+      }
+    },
+    "status": {
+      "title": "Estat actual de conformitat",
+      "content1": "Ens esforcem per mantenir un alt nivell d'accessibilitat, però, a causa de la naturalesa dinàmica del contingut web, és possible que algunes pàgines o funcionalitats no compleixin plenament amb tots els criteris d'accessibilitat.",
+      "content2": "Actualment, les següents àrees poden presentar problemes d'accessibilitat que estem treballant per resoldre:",
+      "issues": {
+        "0": "Alguns documents PDF antics poden no estar completament optimitzats per a lectors de pantalla",
+        "1": "Alguns elements de tercers integrats poden presentar barreres d'accessibilitat fora del nostre control directe"
+      }
+    },
+    "evaluation": {
+      "title": "Avaluació de l'accessibilitat",
+      "content": "L'accessibilitat del nostre lloc web s'avalua regularment a través de:",
+      "methods": {
+        "0": "Proves automàtiques utilitzant eines com Lighthouse i WAVE",
+        "1": "Avaluacions manuals pel nostre equip de desenvolupament",
+        "2": "Proves d'usuari amb persones que utilitzen tecnologies d'assistència"
+      }
+    },
+    "contact": {
+      "title": "Contacte i feedback",
+      "content": "Valorem els seus comentaris sobre l'accessibilitat d'aquest lloc web. Si troba algun problema o barrera d'accessibilitat, o si té suggeriments per millorar l'accessibilitat, si us plau contacteu amb nosaltres:",
+      "email": "Correu electrònic",
+      "phone": "Telèfon",
+      "contactForm": "Formulari de contacte"
+    },
+    "compliance": {
+      "title": "Procediment de compliment",
+      "content1": "Ens comprometem a respondre a tots els informes de problemes d'accessibilitat en un termini màxim de 15 dies hàbils i a treballar diligentment per resoldre qualsevol problema identificat en un temps raonable.",
+      "content2": "Si no està satisfet amb la nostra resposta, pot contactar amb l'autoritat encarregada de fer complir la legislació sobre accessibilitat a Espanya:",
+      "authorities": {
+        "0": "Ministeri d'Afers Econòmics i Transformació Digital",
+        "1": "Observatori d'Accessibilitat Web"
+      }
+    },
+    "preparation": {
+      "title": "Preparació d'aquesta declaració",
+      "prepared": "Aquesta declaració va ser preparada el",
+      "lastReview": "L'última revisió d'aquesta declaració es va realitzar el"
+    },
+    "resources": {
+      "title": "Recursos addicionals",
+      "content": "Per a més informació sobre accessibilitat web, recomanem els següents recursos:",
+      "links": {
+        "0": {
+          "text": "Web Content Accessibility Guidelines (WCAG)",
+          "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+        },
+        "1": {
+          "text": "Web Accessibility Initiative (WAI)",
+          "url": "https://www.w3.org/WAI/"
+        },
+        "2": {
+          "text": "Legislació espanyola sobre accessibilitat web",
+          "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2018-12699"
+        }
+      }
+    },
+    "skipLink": "Saltar al contingut principal"
   }
 }

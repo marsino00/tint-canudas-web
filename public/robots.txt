@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /privado
+Disallow: /api/*
+
+# Host
+Host: https://www.tintoreriacanudas.com
+
+# Sitemaps
+Sitemap: https://www.tintoreriacanudas.com/sitemap.xml
+Sitemap: https://www.tintoreriacanudas.com/server-sitemap.xml

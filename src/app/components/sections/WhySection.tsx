@@ -51,10 +51,14 @@ export default function WhySection() {
   }, [selectedLocale]);
 
   const iconMap: Record<string, JSX.Element> = {
-    BadgeCheck: <BadgeCheck className="h-12 w-12 text-[#d4b897]" />,
-    Sparkles: <Sparkles className="h-12 w-12 text-[#d4b897]" />,
-    Leaf: <Leaf className="h-12 w-12 text-[#d4b897]" />,
-    Star: <Star className="h-12 w-12 text-[#d4b897]" />,
+    BadgeCheck: (
+      <BadgeCheck className="h-12 w-12 text-[#d4b897]" aria-hidden="true" />
+    ),
+    Sparkles: (
+      <Sparkles className="h-12 w-12 text-[#d4b897]" aria-hidden="true" />
+    ),
+    Leaf: <Leaf className="h-12 w-12 text-[#d4b897]" aria-hidden="true" />,
+    Star: <Star className="h-12 w-12 text-[#d4b897]" aria-hidden="true" />,
   };
 
   const containerVariants = {

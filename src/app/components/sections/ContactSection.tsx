@@ -106,7 +106,10 @@ export default function ContactSection() {
           <h2 className="text-4xl font-bold text-black mb-4">
             {t("navbar.contact")}
           </h2>
-          <div className="w-24 h-1 bg-[#d4b897] mx-auto mb-6"></div>
+          <div
+            className="w-24 h-1 bg-[#d4b897] mx-auto mb-6"
+            aria-hidden="true"
+          ></div>
           <p className="text-xl text-gray-600">{t("contact-desc")}</p>
         </motion.div>
 
@@ -127,7 +130,10 @@ export default function ContactSection() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <MapPin className="h-6 w-6 mt-1 text-[#d4b897]" />
+                <MapPin
+                  className="h-6 w-6 mt-1 text-[#d4b897]"
+                  aria-hidden="true"
+                />
                 <div className="ml-4">
                   <h4 className="font-semibold text-lg mb-1">{t("address")}</h4>
                   <p className="text-gray-700">{address}</p>
@@ -140,7 +146,10 @@ export default function ContactSection() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Phone className="h-6 w-6 mt-1 text-[#d4b897]" />
+                <Phone
+                  className="h-6 w-6 mt-1 text-[#d4b897]"
+                  aria-hidden="true"
+                />
                 <div className="ml-4">
                   <h4 className="font-semibold text-lg mb-1">{t("phone")}</h4>
                   <p className="text-gray-700">{phone}</p>
@@ -153,7 +162,10 @@ export default function ContactSection() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <Clock className="h-6 w-6 mt-1 text-[#d4b897]" />
+                <Clock
+                  className="h-6 w-6 mt-1 text-[#d4b897]"
+                  aria-hidden="true"
+                />
                 <div className="ml-4">
                   <h4 className="font-semibold text-lg mb-1">
                     {t("schedule")}
@@ -170,7 +182,10 @@ export default function ContactSection() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <Instagram className="h-6 w-6 mt-1 text-[#d4b897]" />
+                <Instagram
+                  className="h-6 w-6 mt-1 text-[#d4b897]"
+                  aria-hidden="true"
+                />
                 <div className="ml-4">
                   <h4 className="font-semibold text-lg mb-1">Instagram</h4>
                   <a
@@ -292,6 +307,7 @@ export default function ContactSection() {
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
+            title="Mapa de ubicación de Tintorería Canudas en Navarcles"
           ></iframe>
         </motion.div>
       </div>

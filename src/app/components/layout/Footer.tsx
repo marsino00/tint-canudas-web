@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center items-center gap-20">
           <Image
             src="/l1.png"
-            alt="Imagen 1"
+            alt="Financiado UE"
             width={150}
             height={150}
             className="object-contain"
@@ -24,7 +24,7 @@ export default function Footer() {
           />
           <Image
             src="/l2.png"
-            alt="Imagen 2"
+            alt="Gobierno España"
             width={150}
             height={150}
             className="object-contain"
@@ -32,7 +32,7 @@ export default function Footer() {
           />
           <Image
             src="/l3.png"
-            alt="Imagen 3"
+            alt="Red.es"
             width={150}
             height={150}
             className="object-contain"
@@ -40,7 +40,7 @@ export default function Footer() {
           />
           <Image
             src="/l4.png"
-            alt="Imagen 4"
+            alt="Plan Recuperación, Trasnformación y Resiliencia"
             width={150}
             height={150}
             className="object-contain"
@@ -48,7 +48,7 @@ export default function Footer() {
           />
           <Image
             src="/l5.png"
-            alt="Imagen 5"
+            alt="Kit Digital"
             width={150}
             height={150}
             className="object-contain"

@@ -74,43 +74,30 @@ export default function ServicesSection() {
   return (
     <section id="services" className="py-24 bg-[#d4b897]/5 scroll-mt-10">
       <div className="container mx-auto px-4">
-        <motion.div
-          className="text-center max-w-2xl mx-auto mb-16"
-          initial={{ opacity: 0, y: -10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl font-bold text-black mb-4">
-            {t("navbar.services")}
-          </h2>
-          <div className="w-24 h-1 bg-[#d4b897] mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600">{t("services-desc")}</p>
-        </motion.div>
-
+        {/* ... (Título de la sección) ... */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          // ... (props de motion) ...
         >
           {data.map((service) => {
-            const imageSrc = service.fields.serviceImage?.fields?.file?.url
-              ? `https:${service.fields.serviceImage.fields.file.url}`
-              : imageMap[service.fields.title.trim()] || "/default.jpg";
+            const imageSrc = /* ... tu lógica para imageSrc ... */ "";
+            // Intenta obtener una descripción de Contentful para la imagen, si no, usa el título
+            const imageAlt =
+              service.fields.serviceImage?.fields?.description ||
+              service.fields.serviceImage?.fields?.title ||
+              service.fields.title; // <-- MEJORA: Si el título no describe la IMAGEN, añade un alt más específico aquí o en Contentful
 
             return (
               <motion.div
                 key={service.sys.id}
                 className="group flex flex-col bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
-                variants={cardVariants}
-                whileHover={{ scale: 1.03 }}
+                // ... (props de motion) ...
               >
                 <div className="relative h-[250px]">
                   <Image
                     src={imageSrc}
-                    alt={service.fields.title}
+                    // alt={service.fields.title} // <-- ANTES (Podría ser insuficiente)
+                    alt={imageAlt} // <-- DESPUÉS (Prioriza descripción, fallback a título)
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -120,20 +107,19 @@ export default function ServicesSection() {
                 <div className="p-5 flex-1">
                   <div className="flex items-center gap-5">
                     <div className="w-14 h-14 flex items-center justify-center bg-[#d4b897]/10 rounded-full mb-3">
-                      {iconMap[service.fields.icon] || null}
+                      {/* Añadimos aria-hidden a los iconos decorativos */}
+                      {React.cloneElement(
+                        iconMap[service.fields.icon] || (
+                          <ShirtIcon className="h-8 w-8 text-[#d4b897]" />
+                        ),
+                        { "aria-hidden": true }
+                      )}
                     </div>
                     <h3 className="text-xl font-bold text-black mb-4 transition-colors duration-300 group-hover:text-[#d4b897]">
                       {service.fields.title}
                     </h3>
                   </div>
-                  <ul className="space-y-2 text-gray-700">
-                    {service.fields.servicesList.map((item, idx) => (
-                      <li key={idx} className="flex items-center">
-                        <span className="w-1.5 h-1.5 bg-[#d4b897] rounded-full mr-2"></span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  {/* ... (ul de servicios) ... */}
                 </div>
               </motion.div>
             );

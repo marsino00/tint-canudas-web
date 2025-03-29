@@ -95,7 +95,7 @@ export default function AboutSection() {
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <Image
                 src={imageUrl}
-                alt="Nuestra historia"
+                alt="jerseis2.jpg"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                 className="object-cover"

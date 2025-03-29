@@ -88,8 +88,9 @@ export default function TestimonialSection() {
                       <Star
                         key={i}
                         fill="currentColor"
-                        stroke="none"
+                        stroke="currentColor"
                         className="h-5 w-5"
+                        aria-hidden="true"
                       />
                     )
                   )}

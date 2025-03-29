@@ -48,7 +48,7 @@ export default function HeroSection() {
     >
       <Image
         src={imageUrl}
-        alt="Tintorería Canudas"
+        alt="Ropa limpia y cuidadosamente doblada en Tintorería Canudas"
         fill
         className="object-cover"
         priority
@@ -104,7 +104,7 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               className="flex items-center"
             >
-              <Instagram className="mr-2 h-5 w-5" />
+              <Instagram className="mr-2 h-5 w-5" aria-hidden="true" />
               {t("follow")}
             </a>
           </Button>

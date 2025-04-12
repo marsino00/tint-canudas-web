@@ -89,25 +89,26 @@ export default function HeroSection() {
           <Button
             size="lg"
             className="bg-[#d4b897] text-black hover:bg-[#c5a988] px-8 py-6 text-lg transition-all duration-300"
+            onClick={() => {
+              const element = document.getElementById("contact");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           >
-            <a href="#contact">{t("navbar.contact")}</a>
+            {t("navbar.contact")}
           </Button>
 
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg transition-all duration-300"
+          <a
+            href="https://www.instagram.com/tintoreriacanudas/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="inline-flex items-center justify-center rounded-md  font-medium ring-offset-background t focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg transition-all duration-300"
           >
-            <a
-              href="https://www.instagram.com/tintoreriacanudas/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <Instagram className="mr-2 h-5 w-5" />
-              {t("follow")}
-            </a>
-          </Button>
+            <Instagram className="mr-2 h-5 w-5" />
+            {t("follow")}
+          </a>
         </motion.div>
       </motion.div>
     </section>

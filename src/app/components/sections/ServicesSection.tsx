@@ -126,10 +126,10 @@ export default function ServicesSection() {
                       {service.fields.title}
                     </h3>
                   </div>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-2 text-gray-700 list-none">
                     {service.fields.servicesList.map((item, idx) => (
                       <li key={idx} className="flex items-center">
-                        <span className="w-1.5 h-1.5 bg-[#d4b897] rounded-full mr-2"></span>
+                        <span className="w-1.5 h-1.5 bg-[#d4b897] rounded-full mr-2 flex-shrink-0"></span>
                         {item}
                       </li>
                     ))}

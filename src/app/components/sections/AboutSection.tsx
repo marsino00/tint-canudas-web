@@ -83,7 +83,6 @@ export default function AboutSection() {
             </motion.p>
           </motion.div>
 
-          {/* Columna de imagen */}
           <motion.div
             className="order-1 md:order-2"
             initial={{ opacity: 0, x: 50 }}

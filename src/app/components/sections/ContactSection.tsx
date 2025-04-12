@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import { getEntries } from "@/app/lib/contentful";
+import { AlertMessage } from "../ui/AlertMessage";
 
 export interface RichTextNode {
   nodeType: string;
@@ -29,11 +30,21 @@ export type ContactData = {
     id: string;
   };
 };
+
 export default function ContactSection() {
   const t = useTranslations();
-
   const selectedLocale = useLocale();
   const [data, setData] = useState<ContactData[]>([]);
+
+  const [alert, setAlert] = useState<{
+    show: boolean;
+    type: "success" | "error";
+    message: string;
+  }>({
+    show: false,
+    type: "success",
+    message: "",
+  });
 
   useEffect(() => {
     async function fetchTestimonials() {
@@ -69,6 +80,7 @@ export default function ContactSection() {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -78,21 +90,38 @@ export default function ContactSection() {
         body: JSON.stringify(formData),
       });
       if (res.ok) {
-        alert("Missatge enviat correctament");
+        setAlert({
+          show: true,
+          type: "success",
+          message: "Mensaje enviado correctamente",
+        });
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
-        alert("Error al enviar el missatge");
+        setAlert({
+          show: true,
+          type: "error",
+          message: "Error al enviar el mensaje",
+        });
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Error al enviar el missatge");
+      setAlert({
+        show: true,
+        type: "error",
+        message: "Error al enviar el mensaje",
+      });
     }
+  };
+
+  const closeAlert = () => {
+    setAlert((prev) => ({ ...prev, show: false }));
   };
 
   const address = data[0]?.fields?.address ?? "Cargando...";
   const phone = data[0]?.fields?.phone ?? "Cargando...";
   const schedule =
     data[0]?.fields?.schedule?.content?.[0]?.content?.[0]?.value ?? "Cargando";
+
   return (
     <section id="contact" className="py-24 bg-white scroll-mt-5">
       <div className="container mx-auto px-4">
@@ -127,7 +156,10 @@ export default function ContactSection() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
               >
-                <MapPin className="h-6 w-6 mt-1 text-[#d4b897]" />
+                <MapPin
+                  className="h-6 w-6 mt-1 text-[#d4b897]"
+                  aria-hidden="true"
+                />
                 <div className="ml-4">
                   <h4 className="font-semibold text-lg mb-1">{t("address")}</h4>
                   <p className="text-gray-700">{address}</p>
@@ -140,7 +172,10 @@ export default function ContactSection() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Phone className="h-6 w-6 mt-1 text-[#d4b897]" />
+                <Phone
+                  className="h-6 w-6 mt-1 text-[#d4b897]"
+                  aria-hidden="true"
+                />
                 <div className="ml-4">
                   <h4 className="font-semibold text-lg mb-1">{t("phone")}</h4>
                   <p className="text-gray-700">{phone}</p>
@@ -153,7 +188,10 @@ export default function ContactSection() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <Clock className="h-6 w-6 mt-1 text-[#d4b897]" />
+                <Clock
+                  className="h-6 w-6 mt-1 text-[#d4b897]"
+                  aria-hidden="true"
+                />
                 <div className="ml-4">
                   <h4 className="font-semibold text-lg mb-1">
                     {t("schedule")}
@@ -170,7 +208,10 @@ export default function ContactSection() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <Instagram className="h-6 w-6 mt-1 text-[#d4b897]" />
+                <Instagram
+                  className="h-6 w-6 mt-1 text-[#d4b897]"
+                  aria-hidden="true"
+                />
                 <div className="ml-4">
                   <h4 className="font-semibold text-lg mb-1">Instagram</h4>
                   <a
@@ -196,6 +237,15 @@ export default function ContactSection() {
             <h3 className="text-2xl font-bold mb-8">
               {t("contact-form.title")}
             </h3>
+
+            {alert.show && (
+              <AlertMessage
+                type={alert.type}
+                message={alert.message}
+                onClose={closeAlert}
+              />
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
@@ -209,9 +259,10 @@ export default function ContactSection() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:border-[#d4b897] focus:ring-1 focus:ring-[#d4b897] transition"
+                  className="w-full border border-gray-600 px-4 py-2 rounded focus:outline-none focus:border-[#d4b897] focus:ring-1 focus:ring-[#d4b897] transition"
                   required
                   placeholder={t("contact-form.placeholder.name")}
+                  autoComplete="name"
                 />
               </div>
               <div>
@@ -227,9 +278,10 @@ export default function ContactSection() {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:border-[#d4b897] focus:ring-1 focus:ring-[#d4b897] transition"
+                  className="w-full border border-gray-600 px-4 py-2 rounded focus:outline-none focus:border-[#d4b897] focus:ring-1 focus:ring-[#d4b897] transition"
                   required
                   placeholder={t("contact-form.placeholder.email")}
+                  autoComplete="email"
                 />
               </div>
               <div>
@@ -245,9 +297,10 @@ export default function ContactSection() {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:border-[#d4b897] focus:ring-1 focus:ring-[#d4b897] transition"
+                  className="w-full border border-gray-600 px-4 py-2 rounded focus:outline-none focus:border-[#d4b897] focus:ring-1 focus:ring-[#d4b897] transition"
                   required
                   placeholder="666 66 66 66"
+                  autoComplete="tel"
                 />
               </div>
               <div>
@@ -263,7 +316,7 @@ export default function ContactSection() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 px-4 py-2 rounded focus:outline-none focus:border-[#d4b897] focus:ring-1 focus:ring-[#d4b897] transition"
+                  className="w-full border border-gray-600 px-4 py-2 rounded focus:outline-none focus:border-[#d4b897] focus:ring-1 focus:ring-[#d4b897] transition"
                   required
                   placeholder={t("contact-form.placeholder.message")}
                 />
@@ -287,11 +340,10 @@ export default function ContactSection() {
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2982.4770452461654!2d1.9012263!3d41.7483844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4f1b7c4b5c761%3A0x1c0a6f5f1f9b0c0a!2sCarrer%20Nou%2C%2064%2C%2008270%20Navarcles%2C%20Barcelona!5e0!3m2!1sen!2ses!4v1650000000000!5m2!1sen!2ses"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
+            className="w-full h-full border-0"
             allowFullScreen
             loading="lazy"
+            title="Ubicación de la tintorería"
           ></iframe>
         </motion.div>
       </div>

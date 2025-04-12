@@ -26,7 +26,6 @@ export default function TestimonialSection() {
   const controls = useAnimation();
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  // Referencia para el anuncio de voz
   const liveRegionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -50,7 +49,6 @@ export default function TestimonialSection() {
     fetchTestimonials();
   }, [selectedLocale]);
 
-  // Start or pause animation based on isPaused state
   useEffect(() => {
     if (!isPaused && testimonials.length > 0) {
       controls.start({
@@ -66,7 +64,6 @@ export default function TestimonialSection() {
     }
   }, [isPaused, testimonials, controls]);
 
-  // Actualizar región en vivo para anunciar cambios
   useEffect(() => {
     if (testimonials.length > 0 && liveRegionRef.current) {
       const currentTestimonial = testimonials[currentSlideIndex];
@@ -78,7 +75,6 @@ export default function TestimonialSection() {
     }
   }, [currentSlideIndex, testimonials]);
 
-  // Detectar prefers-reduced-motion
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mediaQuery.matches) {
@@ -97,7 +93,6 @@ export default function TestimonialSection() {
 
   const togglePause = () => {
     setIsPaused(!isPaused);
-    // Anunciar cambio de estado para lectores de pantalla
     if (liveRegionRef.current) {
       liveRegionRef.current.textContent = !isPaused
         ? "Carrusel pausado"
@@ -113,7 +108,7 @@ export default function TestimonialSection() {
     );
 
     if (carouselRef.current) {
-      const slideWidth = 300 + 32; // slide width + margin
+      const slideWidth = 300 + 32;
       const newPosition = -(currentSlideIndex * slideWidth);
       controls.set({ x: `${newPosition}px` });
     }
@@ -127,13 +122,12 @@ export default function TestimonialSection() {
     );
 
     if (carouselRef.current) {
-      const slideWidth = 300 + 32; // slide width + margin
+      const slideWidth = 300 + 32;
       const newPosition = -(currentSlideIndex * slideWidth);
       controls.set({ x: `${newPosition}px` });
     }
   };
 
-  // Handle keyboard events
   const handleKeyDown = (event: React.KeyboardEvent) => {
     switch (event.key) {
       case "ArrowLeft":
@@ -142,8 +136,8 @@ export default function TestimonialSection() {
       case "ArrowRight":
         goToNextSlide();
         break;
-      case " ": // Space key
-        event.preventDefault(); // Prevent page scroll
+      case " ":
+        event.preventDefault();
         togglePause();
         break;
       default:
@@ -159,7 +153,6 @@ export default function TestimonialSection() {
       id="testimonials"
       className="py-24 bg-[#d4b897]/5 relative scroll-mt-15"
     >
-      {/* Región en vivo para anuncios de accesibilidad */}
       <div
         ref={liveRegionRef}
         className="sr-only"
@@ -185,7 +178,6 @@ export default function TestimonialSection() {
           <p className="text-xl text-gray-600">{t("testimonials-desc")}</p>
         </motion.div>
 
-        {/* Carousel controls */}
         <div
           className="flex justify-center gap-4 mb-6"
           role="group"
@@ -222,7 +214,6 @@ export default function TestimonialSection() {
           </button>
         </div>
 
-        {/* Carousel with testimonials */}
         <div
           className="overflow-hidden"
           role="region"
@@ -251,10 +242,8 @@ export default function TestimonialSection() {
                   (index % testimonials.length) + 1
                 } de ${testimonials.length}`}
               >
-                <div
-                  className="flex justify-center mb-4 text-[#d4b897]"
-                  aria-label={`Valoración: ${testimonial.fields.stars} de 5 estrellas`}
-                >
+                <div className="flex justify-center mb-4 text-[#d4b897]">
+                  <span className="sr-only">{`Valoración: ${testimonial.fields.stars} de 5 estrellas`}</span>
                   {Array.from({ length: testimonial.fields.stars }).map(
                     (_, i) => (
                       <Star
@@ -279,9 +268,9 @@ export default function TestimonialSection() {
                 <p className="text-gray-700 italic mb-4">
                   &quot;{testimonial.fields.opinion}&quot;
                 </p>
-                <h4 className="mt-auto font-semibold text-black text-center">
+                <h3 className="mt-auto font-semibold text-black text-center">
                   — {testimonial.fields.reviewAuthor}
-                </h4>
+                </h3>
               </motion.div>
             ))}
           </motion.div>

@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
 export const viewport: Viewport = {
   initialScale: 1,
   width: "device-width",
-  maximumScale: 1,
-  userScalable: false,
 };
+
 export const metadata: Metadata = {
   title: "Tintoreria Canudas",
   description: "La nostra tintoreria, la teva tranquil•litat",
@@ -37,6 +37,7 @@ export default async function RootLayout({
   const locale = await getLocale();
   const initialLocale = "ca";
   const initialMessages = (await import("../../messages/ca.json")).default;
+
   return (
     <html lang={locale}>
       <body

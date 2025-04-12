@@ -218,7 +218,7 @@ export default function ContactSection() {
                     href="https://www.instagram.com/tintoreriacanudas/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#d4b897] hover:text-[#c5a988] transition-colors duration-300"
+                    className="text-[#664e30] hover:text-[#482f15] transition-colors duration-300 font-medium underline"
                   >
                     @tintoreriacanudas
                   </a>

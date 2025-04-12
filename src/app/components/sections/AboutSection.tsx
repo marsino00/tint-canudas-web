@@ -53,18 +53,24 @@ export default function AboutSection() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Título con contraste mejorado - corregido el color de texto */}
             <motion.h2
               className="text-4xl font-bold mb-6 text-black"
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              style={{ color: "rgba(0, 0, 0, 1)" }} // Asegura color negro sólido
             >
               {t("navbar.about")}
             </motion.h2>
-            <div className="w-24 h-1 bg-[#d4b897] mb-8"></div>
+
+            {/* Divisor con contraste adecuado */}
+            <div className="w-24 h-1 bg-[#926e44] mb-8"></div>
+
+            {/* Primer párrafo */}
             <motion.p
-              className="text-lg leading-relaxed mb-6 text-gray-700"
+              className="text-lg leading-relaxed mb-6 text-gray-800" // Cambiado de text-gray-700 a text-gray-800 para mejor contraste
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -72,8 +78,10 @@ export default function AboutSection() {
             >
               {data[0]?.fields?.aboutText ?? "Cargando..."}
             </motion.p>
+
+            {/* Segundo párrafo */}
             <motion.p
-              className="text-lg leading-relaxed mb-6 text-gray-700"
+              className="text-lg leading-relaxed mb-6 text-gray-800" // Cambiado de text-gray-700 a text-gray-800 para mejor contraste
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
